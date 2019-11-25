@@ -8,9 +8,10 @@ body {
 
 video {
 	width:700px;
+	margin-top:20px;
 	opacity:0;
     -webkit-animation: fadein 1s;
-       -moz-animation: fadein 1s; 
+       -moz-animation: fadein 1s;
         -ms-animation: fadein 1s;
             animation: fadein 1s;
     -webkit-animation-fill-mode: forwards;
@@ -80,4 +81,3 @@ footer {
 		margin:0 auto 0 -250px;
 	}
 }
-
