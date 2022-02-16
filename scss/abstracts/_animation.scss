@@ -1,0 +1,77 @@
+@use 'mixins' as *;
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content
+  }
+  @-moz-keyframes #{$name} {
+    @content
+  }
+  @-ms-keyframes #{$name} {
+    @content
+  }
+  @-o-keyframes #{$name} {
+    @content
+  }
+  @keyframes #{$name} {
+    @content
+  }
+}
+
+@mixin animation($animation) {
+  -webkit-animation: $animation;
+  -moz-animation: $animation;
+  animation: $animation;
+}
+@mixin firefox-only {
+  @at-root {
+    @-moz-document url-prefix() {
+      & {
+        @content;
+      }
+    }
+  }
+}
+
+@include keyframes(moveup) {
+  0% {
+		transform:translateY(10%);
+    opacity:0;
+		}
+  20% {
+      opacity:1;
+  }
+	100% {
+    transform:translateY(0%);
+	}
+}
+
+@include keyframes(move) {
+  0% {
+		transform:translateY(-400%);
+		}
+
+	100% {
+    transform:translateY(-50%);
+	}
+}
+
+@include keyframes(fade) {
+  0% {
+		opacity:0.1;
+		}
+
+	100% {
+		opacity:0.5;
+		}
+}
+
+
+@include keyframes(fadein) {
+  0% {
+		opacity:0;
+		}
+	100% {
+		opacity:1
+		}
+}

@@ -1,0 +1,26 @@
+@use 'variables' as *;
+
+$bg: white;
+$hl: rgba(0,78,38,1);
+$dark: black;
+$light: white;
+$lighttrans :rgba(255,255,255,0.5);
+
+$blight: 5px solid $light;
+$bdark:8px solid $hl;
+
+
+%darkcolors {
+	background-color:$dark;
+	color:$light;
+  a {
+    color:$light;
+    &:hover{
+			color:$hl;
+		}
+  }
+}
+%lightcolors {
+  background-color: transparentize($light, .4);
+  color:$dark;
+}

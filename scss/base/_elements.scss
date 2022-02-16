@@ -1,0 +1,94 @@
+@use '../abstracts/' as *;
+@forward 'reset';
+
+html {
+	font-weight: 200;
+	@extend %no-space;
+	color:$light;
+		&:before {
+		    @extend %pseudo;
+		    @extend %fixed;
+		    background: $dark;
+				@include offset($top: 0, $left: 0, $height:100vh , $z-index: 10);
+				width: $borderwidth ;
+
+		}
+
+		&:after {
+				@extend %pseudo;
+				@extend %fixed;
+				background: $dark;
+				@include offset($top: 0, $right: 0,$height:100vh);
+				width: $borderwidth ;
+		}
+}
+
+body {
+	margin:0;
+	font-family:$mainfont;
+
+	background:url(../bg_body.png);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.2) 10%, rgba(248,230,167,0.3) 80%, rgba(246,215,105,0.35) 90%), url(../bg_body.png);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%,  color-stop(0%, rgba(255,255,255,0.2)), color-stop(55%, rgba(255,255,255,0.3)), color-stop(90%, rgba(246,215,105,0.35))),  url(../bg_body.png);
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.2) 10%, rgba(248,230,167,0.3) 80%, rgba(246,215,105,0.35) 90%),  url(../bg_body.png);
+	background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,0.2) 10%, rgba(248,230,167,0.4) 80%, rgba(246,215,105,0.35) 90%),  url(../bg_body.png);
+
+	scrollbar-width: none; /* Firefox */
+	-ms-overflow-style: none;  /* Internet Explorer 10+ */
+
+		@include large{
+			height:100vh;
+			overflow:hidden;
+
+		}
+		@include medium{
+			height:auto;
+			overflow: auto;
+		}
+		@include small{
+	//	overflow-y: scroll;
+
+		}
+
+	&:before {
+	    @extend %pseudo;
+	    @extend %fixed;
+	    background: $dark;
+			@include offset($top: 0, $left: 0, $right: 0, $height:$borderwidth , $z-index: 10);
+	}
+
+	&:after {
+			@extend %pseudo;
+			@extend %fixed;
+			background: $dark;
+			@include offset($left: 0, $right: 0, $bottom: 0);
+			height: $borderwidth ;
+	}
+
+}
+
+.body--noscroll {
+			height:100vh;
+			overflow:hidden;
+}
+
+.main-wrapper {
+	@extend %relative;
+	height: 100vh;
+  margin: 0 auto;
+//  min-width: 100%;
+//	max-width: 1000px;
+	width:100%;
+
+	@include medium {
+			display: flex;
+			flex-direction: row;
+	//		align-items: flex-start;
+	//		justify-content: center;
+	}
+
+	@include large {
+		height:100vh;
+		overflow:hidden;
+	}
+}

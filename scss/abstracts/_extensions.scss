@@ -1,0 +1,98 @@
+@use 'variables' as *;
+@use 'colours' as *;
+
+%fixed {
+  position:fixed;
+}
+
+%relative {
+  position:relative;
+}
+%pseudo{
+    content:'';
+    width:100%;
+    height:100%;
+}
+
+%padding {
+  padding:$space;
+}
+
+%margin-top {
+    margin-top:$space;
+}
+%margin-bottom {
+    margin-bottom: $space;
+}
+%margin-right-left {
+    margin-right:$space;
+    margin-left:$space;
+}
+%no-space {
+	margin:0;
+	padding:0;
+}
+%center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+%no-scrollbar {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer 10+ */
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+}
+
+
+%overflow-hidden {
+  overflow: hidden;
+}
+%text-center {
+  text-align: center;
+}
+
+%text-left{
+  text-align: left;
+}
+
+%text-right{
+  text-align: right;
+}
+
+%text-uppercase {
+  text-transform: uppercase;
+}
+
+%full-width {
+	width:100%;
+}
+
+%full-height {
+  height:100%;
+}
+
+%block {
+  display:block;
+}
+
+%border-top {
+	border-top:$borderwidth  solid $dark;
+
+}
+
+%border-right {
+	border-right:$borderwidth  solid $dark;
+}
+
+%border-bottom {
+	border-bottom:$borderwidth solid $dark;
+
+}
+
+%border-left {
+	border-left:$borderwidth  solid $dark;
+}

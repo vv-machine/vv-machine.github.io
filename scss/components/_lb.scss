@@ -1,0 +1,241 @@
+@use '../abstracts/' as *;
+
+.lb {
+//  @extend %darkcolors;
+//  @extend %padding;
+//  @extend %fixed;
+//  @extend %full-height;
+//  @include offset($top: 0, $left:0, $z-index:200);
+/*  &:target {
+    display:block;
+    @include animation(fadein 0.5s linear 0s 1 forwards);
+  }*/
+  @include overlay($background-color: $dark, $color:white, $left: 0, $top:0, $z-index: 500);
+  @extend %no-space;
+  @extend %no-scrollbar;
+  @include grid($width: 100vw);
+  overflow-y: scroll;
+  @extend %no-scrollbar;
+
+  &__content {
+    @extend %no-scrollbar;
+      width: $mainwidth;
+      max-width: 90%;
+      @extend %center;
+      @extend %text-center;
+      padding-top:160px;
+      margin-bottom:100px;
+    }
+
+  &__iframecontainer {
+      padding:56.25% 0 0 0;
+      position: relative;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+
+    &__colours {
+      display:inline-block;
+      width:35px;
+      height:35px;
+      margin-right:$space;
+      margin-bottom: $space;
+
+      &:first-of-type {
+        background-color: #943e9f;
+      }
+
+      &:nth-of-type(2) {
+        background-color: #fe6b1b;
+      }
+
+      &:nth-of-type(3) {
+        background-color: #c45595;
+      }
+
+      &:nth-of-type(4) {
+        background-color: #d85d6d;
+      }
+
+      &:nth-of-type(5) {
+        background-color: #c683ce;
+      }
+
+      &:nth-of-type(6) {
+        background-color: #fea676;
+      }
+
+      &:nth-of-type(7) {
+        background-color: #d9addf;
+      }
+
+      &:nth-of-type(8) {
+        background-color: #ffc4a4;
+      }
+
+      &:nth-of-type(9) {
+              background-color: #202020;
+      }
+
+      &:nth-of-type(10) {
+              background-color: #4d4d4d;
+      }
+
+      &:nth-of-type(11) {
+              background-color: #797979;
+      }
+
+      &:nth-of-type(12) {
+              background-color: #ebecec;
+      }
+
+
+      &:last-of-type {
+          width:94%;
+          height:36%;
+          background:radial-gradient(214.07% 217.99% at 32.29% -48%, #404040 0%, #202020 67.43%, #202020 100%);
+      }
+    }
+
+    &__img {
+      margin:10px auto 10px;
+
+      @extend %full-width;
+      margin:10px auto 10px;
+      align-self: center;
+      &--half {
+        width:40%;
+        margin:0 4% 20px;
+
+        @include small {
+          width:70%;
+          margin:30px auto;
+
+        }
+      }
+      &--twothirds {
+        width:75%;
+        margin:0 4% 20px;
+
+        @include small {
+          width:85%;
+          margin:30px auto;
+
+        }
+      }
+      &--auto {
+        width:auto;
+        height:auto;
+        padding:0;
+        margin:0 5px 20px;
+
+      }
+    }
+
+
+    &__item {
+              @extend %text-center;
+
+              & h1 {
+                @include typeScale(3,4);
+                margin:0 auto;
+
+                strong {
+                  text-transform: none;
+                  @include typeScale(1,2);
+                }
+              }
+
+              & strong {
+                @include typeScale(1,2);
+
+              }
+
+              & h2 {
+                margin:20px auto 0;
+                @include typeScale(2,3);
+
+              }
+
+              & h3 {
+                margin:20px auto;
+              }
+
+              & p {
+                margin:0 auto 20px ;
+
+                b {
+                  font-weight: bold;
+                }
+              }
+
+              & a {
+                color:$light;
+                font-weight:normal;
+                &:hover {
+                  text-decoration:underline;
+                }
+              }
+              strong {
+                @extend %block;
+                margin:0 auto $space;
+                font-weight: 400;
+
+              }
+
+              &--text-left {
+                text-align:left;
+              }
+
+              &--font-lato p {
+                font-weight: 400;
+                font-family: 'Lato', sans-serif;
+              }
+
+              &--border {
+                border:1px solid white;
+                padding: $space;
+                margin:$space auto;
+
+              }
+
+              &--topspace {
+                margin-top:50px;
+
+              }
+
+              & lottie-player {
+                margin:$space auto;
+
+              }
+    }
+    &__text {
+              @extend %center;
+              @extend %text-center;
+    }
+
+    a {
+        @include typeScale(0, 1);
+    }
+
+    &__button {
+        @extend %fixed;
+        @include offset($top: $space, $right:$space, $z-index:4);
+        @extend %darkcolors;
+        padding:$space;
+        text-decoration: none;
+        @include typeScale(2, 1.5);
+        &:visited {
+          color:white;
+        }
+      }
+
+
+}

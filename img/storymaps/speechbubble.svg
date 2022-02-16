@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 928 961" width="100%" height="100%" style="enable-background:new 0 0 928 961;" xml:space="preserve"  preserveAspectRatio="xMidYMin meet">
+<style type="text/css">
+	.st0{fill-rule:evenodd;clip-rule:evenodd;      filter: drop-shadow(0px 0px 1px black);}
+	.st1{fill:#FFFFFF;  outline: 6px solid red;}
+	image {
+    filter: drop-shadow(0px 0px 1px red);
+}
+</style>
+<defs>
+<mask id="mask">
+	<g>
+		<path id="Shape_1_copy" class="st0" d="M772.5,57h-521C144.1,57,57,135.4,57,232.2l41,492.2c0,96.8,105.5,175.3,212.9,175.3h214.7
+			l88.1,100.3l89.6-100.3h1.5C831.1,900,926,821.2,926,724.4l41-492.2C967,135.4,879.9,57,772.5,57z"/>
+	</g>
+	<g transform="translate(-48 -48)">
+		<path class="st1" d="M724.5,9h-521C96.1,9,9,87.4,9,184.2l41,492.2c0,96.8,105.5,175.3,212.9,175.3h214.7L565.7,952l89.6-100.3h1.5
+			C783.1,852,878,773.2,878,676.4l41-492.2C919,87.4,831.9,9,724.5,9z"/>
+	</g>
+</mask>
+</defs>
+<image mask="url(#mask)" xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="https://cdn.glitch.com/04eadd2b-7dd4-43fc-af3d-cff948811986%2Fballoons.jpg?v=1597755892826" width="100%" height="100%" y="0" x="0"></image>
+
+</svg>
