@@ -1,0 +1,48 @@
+@use 'variables' as *;
+@use 'colours' as *;
+//@use 'animation' as *;
+
+
+@mixin grid( $width: null) {
+
+  width:$width;
+
+  & div[class^="lb__item--col-"] {
+  //  padding: $space;
+    text-align: center;
+    box-sizing: border-box;
+    float:left;
+    @extend %no-space;
+  }
+
+
+
+  &__content {
+    position:relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+
+  }
+
+  & break {
+    flex-basis: 100%;
+  }
+
+}
+
+
+
+$columns: 15;
+
+@for $i from 1 through $columns {
+ .lb__item--col-#{$i} {
+   flex: 0 0 100% / $columns * $i;
+
+ }
+ .lb__item--col-offset-#{$i} {
+   margin-left: 100% / $columns * $i;
+
+ }
+}

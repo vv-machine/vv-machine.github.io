@@ -1,0 +1,72 @@
+@use '../abstracts/' as *;
+
+
+
+
+.button {
+  background: transparent;
+  box-shadow: 0px 0px 0px transparent;
+  border: 0px solid transparent;
+  text-shadow: 0px 0px 0px transparent;
+  display:block;
+
+
+  &--hamburger {
+    height:30px;
+    width:65px;
+    z-index:200;
+    position:fixed;
+    top:30px;
+    right:20px;
+  }
+  &--hamburger span{
+    display:block;
+    position:absolute;
+    height:$borderwidth;
+    width:65px;
+    margin:0;
+    padding:0;
+    left:0;
+    background-color: $dark;
+    border-radius:5px;
+
+  &:before {
+        position:absolute;
+        @extend %pseudo;
+        width:65px;
+        height:$borderwidth;
+        background-color: $dark;
+        border-radius:5px;
+        top:10px;
+        left:0;
+    }
+
+    &:after {
+        position:absolute;
+        @extend %pseudo;
+        width:65px;
+        height:$borderwidth;
+        background-color: $dark;
+        border-radius:5px;
+        bottom:10px;
+        left:0;
+    }
+
+  }
+
+  &.close {
+     color:$light;
+
+     &:after {
+       content: "\2715";
+       color:  $light;
+       @include typeScale(1, 2);
+     }
+
+     & span {
+      display:none;
+     }
+   }
+
+
+}

@@ -1,0 +1,51 @@
+@use '../abstracts/' as *;
+
+.header {
+		 // @include position(absolute, $top: 100px, $left: 5%);
+//			@extend %block;
+	order:1;
+	@extend %text-center;
+	@include large {
+		flex: 1;
+	}
+	@include medium {
+		min-width:340px;
+	}
+
+	&__logo {
+		width:270px;
+//		border:1px solid red;
+		@extend %center;
+//		@extend %block;
+@include animation(moveup 0.25s linear 0s 1 forwards);
+
+		@include small {
+			margin-top:130px;
+			margin-bottom:100px;
+			width:260px;
+
+		}
+
+		@include medium {
+			margin:160px auto 0;
+			max-width:100%;
+		}
+
+		@include x-large {
+			float:right;
+			margin-right:80px;
+		}
+
+	}
+
+	@include small {
+/*		position:fixed;
+		z-index: 250;
+
+		top:0;
+		left:0;
+		background-color: black;
+		height:50px;*/
+		width:100%;
+	}
+}
