@@ -1,107 +1,70 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>
-      VV-machine - Illustration, Vector Meditation, Animation, Coding
-    </title>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
-    />
-    <meta content="width=device-width,initial-scale=1.0" name="viewport" />
-    <meta name="description" content="" />
-    <meta
-      name="author"
-      content="VV-machine is an digital designer + artist, who gets excited over everything from upcycling, illustration and Vector Meditation to animation, frontend development and other techy stuff"
-    />
-    <meta
-      name="keywords"
-      content="VV-machine, graphic design, animation, web Design, fronted development, digital art"
-    />
-    <link rel="icon" href="favicon.ico" sizes="any" />
-    <link rel="icon" href="icon.svg" type="image/svg+xml" />
-    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
-    <link rel="manifest" href="manifest.webmanifest" />
-    <link rel="stylesheet" href="scss/main.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="js/lazysizes.min.js" async=""></script>
-    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-    <link
-      href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css"
-      rel="stylesheet"
-    />
-    <script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
-  </head>
-  <body>
-    <div class="main-wrapper">
-      <header class="header">
-        <div class="header__logo">
-          <img src="img/vvmachine.svg" alt="VV-Machine" />
-        </div>
-      </header>
-      <nav class="nav">
-        <ul class="nav__content">
-          <li class="nav__link nav__link--info">
-            <a href="#vv-machine" class="nav__link">
-              <svg class="nav__img">
-                <use xlink:href="sprite.svg#info"></use>
-              </svg>
-              Info
-            </a>
-          </li>
-          <li class="nav__link">
-            <a
-              href="https://www.instagram.com/vv.machine/"
-              target="_blank"
-              class="nav__link"
-            >
-              <svg class="nav__img">
-                <use xlink:href="sprite.svg#instagram"></use>
-              </svg>
-              @vv.machine
-            </a>
-          </li>
-          <li class="nav__link">
-            <a href="https://dribbble.com/VV-Machine" target="_blank">
-              <svg class="nav__img">
-                <use xlink:href="sprite.svg#dribbble"></use>
-              </svg>
-              Dribbble
-            </a>
-          </li>
-          <li class="nav__link">
-            <a href="mailto:hello@vv-machine.com" target="_blank">
-              <svg class="nav__img">
-                <use xlink:href="sprite.svg#mail"></use>
-              </svg>
-              hello@vv-machine.com
-            </a>
-          </li>
-          <li class="nav__link">
-            <a href="https://github.com/vv-machine" target="_blank">
-              <svg class="nav__img">
-                <use xlink:href="sprite.svg#github"></use>
-              </svg>
-              Github
-            </a>
-          </li>
-          <!--
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title> VV-machine - Illustration, Vector Meditation, Animation, Coding </title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+	<meta content="width=device-width,initial-scale=1.0" name="viewport" />
+	<meta name="description" content="" />
+	<meta name="author" content="VV-machine is an digital designer + artist, who gets excited over everything from upcycling, illustration and Vector Meditation to animation, frontend development and other techy stuff" />
+	<meta name="keywords" content="VV-machine, graphic design, animation, web Design, fronted development, digital art" />
+	<link rel="icon" href="favicon.ico" sizes="any" />
+	<link rel="icon" href="icon.svg" type="image/svg+xml" />
+	<link rel="apple-touch-icon" href="apple-touch-icon.png" />
+	<link rel="manifest" href="manifest.webmanifest" />
+	<link rel="stylesheet" href="scss/main.css" />
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;600&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/lazysizes.min.js" async=""></script>
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+	<link href="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.css" rel="stylesheet" />
+	<script src="https://api.mapbox.com/mapbox-gl-js/v2.5.1/mapbox-gl.js"></script>
+</head>
+
+<body>
+	<div class="main-wrapper">
+		<header class="header">
+			<div class="header__logo"> <img src="img/vvmachine.svg" alt="VV-Machine" /> </div>
+		</header>
+		<nav class="nav">
+			<ul class="nav__content">
+				<li class="nav__link nav__link--info">
+					<a href="#vv-machine" class="nav__link">
+						<svg class="nav__img">
+							<use xlink:href="sprite.svg#info"></use>
+						</svg> Info </a>
+				</li>
+				<li class="nav__link">
+					<a href="https://www.instagram.com/vv.machine/" target="_blank" class="nav__link">
+						<svg class="nav__img">
+							<use xlink:href="sprite.svg#instagram"></use>
+						</svg> @vv.machine </a>
+				</li>
+				<li class="nav__link">
+					<a href="https://dribbble.com/VV-Machine" target="_blank">
+						<svg class="nav__img">
+							<use xlink:href="sprite.svg#dribbble"></use>
+						</svg> Dribbble </a>
+				</li>
+				<li class="nav__link">
+					<a href="mailto:hello@vv-machine.com" target="_blank">
+						<svg class="nav__img">
+							<use xlink:href="sprite.svg#mail"></use>
+						</svg> hello@vv-machine.com </a>
+				</li>
+				<li class="nav__link">
+					<a href="https://github.com/vv-machine" target="_blank">
+						<svg class="nav__img">
+							<use xlink:href="sprite.svg#github"></use>
+						</svg> Github </a>
+				</li>
+				<!--
 					<li class="nav__link">
 						<a href="#" target="_blank" >
 							<svg class="nav__img">
@@ -110,494 +73,232 @@
 							Linkedin
 						</a>
 					</li> -->
-        </ul>
-      </nav>
-
-      <main class="main">
-        <ul class="main__list main__list--left">
-          <h1 class="main__title">Design</h1>
-          <li class="main__item">
-            <a href="#storymaps" class="main__link">
-              <img
-                data-src="img/SM_snake.gif"
-                alt="Story Maps Australia thumbnail"
-                class="main__img lazyload"
-              />
-              <span class="main__link-text"
-                >Story Maps
-                <strong class="main__link-subtitle"
-                  >UI-Design, Animation and Graphic Design</strong
-                >
+			</ul>
+		</nav>
+		<main class="main">
+			<ul class="main__list main__list--left">
+				<h1 class="main__title">Design</h1>
+				<li class="main__item">
+					<a href="#storymaps" class="main__link">
+						<img src="img/SM_snake.gif" alt="Story Maps Australia thumbnail" class="main__img" />
+						<span class="main__link-text">Story Maps
+                <strong class="main__link-subtitle">UI-Design, Animation and Graphic Design</strong>
+            </span>
+					</a>
+				</li>
+				<li class="main__item">
+					<a href="#seam" class="main__link">
+						<lottie-player src="img/seam.json" background="radial-gradient(214.07% 217.99% at 32.29% -48%, #404040 0%, #202020 67.43%, #202020 100%)" speed="1" style="width: 100%; height: auto" loop autoplay></lottie-player>
+						<span class="main__link-text">Seam
+                <strong class="main__link-subtitle">Visual Concept and Graphic Guidelines</strong>
               </span>
-            </a>
-          </li>
-          <li class="main__item">
-            <a href="#seam" class="main__link">
-              <lottie-player
-                src="img/seam.json"
-                background="radial-gradient(214.07% 217.99% at 32.29% -48%, #404040 0%, #202020 67.43%, #202020 100%)"
-                speed="1"
-                style="width: 100%; height: auto"
-                loop
-                autoplay
-              ></lottie-player>
-              <span class="main__link-text"
-                >Seam
-                <strong class="main__link-subtitle"
-                  >Visual Concept and Graphic Guidelines</strong
+						</a>
+				</li>
+				<li class="main__item">
+					<a href="#storybook" class="main__link">
+						<img src="img/thumb_storybookoffranklinford.jpg" alt="Storybook of Franklinford thumbnail" class="main__img" />
+						<span class="main__link-text">Storybook of Franklinford
+                <strong class="main__link-subtitle">Custom 3d Flipbook Wordpress Theme</strong>
+            </span>
+					</a>
+				</li>
+				<li class="main__item">
+					<a href="#courseschedule" class="main__link">
+						<img src="img/thumb_cadpool.jpg" alt="Cadpool thumbnail" class="main__img" />
+						<span class="main__link-text">Cadpool Course Schedules
+                <strong class="main__link-subtitle">Layout and Print Design</strong
                 >
+              </span> </a>
+				</li>
+				<li class="main__item">
+					<a href="#logoandicondesign" class="main__link">
+						<img src="img/thumb_logos.jpg" alt="Logo and Icon Design thumbnail" class="main__img" />
+						<span class="main__link-text">Logo and Icon Design
+                <strong class="main__link-subtitle">Logo and Icon Designs</strong>
               </span>
-            </a>
-          </li>
-          <li class="main__item">
-            <a href="#storybook" class="main__link">
-              <img
-                data-src="img/thumb_storybookoffranklinford.jpg"
-                alt="Storybook of Franklinford thumbnail"
-                class="main__img lazyload"
-              />
-              <span class="main__link-text"
-                >Storybook of Franklinford
-                <strong class="main__link-subtitle"
-                  >Custom 3d Flipbook Wordpress Theme with Rustic Aged
-                  look</strong
-                >
-              </span>
-            </a>
-          </li>
-          <li class="main__item">
-            <a href="#courseschedule" class="main__link">
-              <img
-                data-src="img/thumb_cadpool.jpg"
-                alt="Cadpool thumbnail"
-                class="main__img lazyload"
-              />
-              <span class="main__link-text"
-                >Cadpool Course Schedules
-                <strong class="main__link-subtitle"
-                  >Layout and Print Design</strong
-                >
-              </span>
-            </a>
-          </li>
-          <li class="main__item">
-            <a href="#logoandicondesign" class="main__link">
-              <img
-                data-src="img/thumb_logos.jpg"
-                alt="Logo and Icon Design thumbnail"
-                class="main__img lazyload"
-              />
-              <span class="main__link-text"
-                >Logo and Icon Design
-                <strong class="main__link-subtitle"
-                  >Logo and Icon Designs</strong
-                >
-              </span>
-            </a>
-          </li>
-        </ul>
-
-        <ul class="main__list main__list--right">
-          <h1 class="main__title">Art</h1>
-          <li class="main__item">
-            <a href="#forever" class="main__link">
-              <img
-                data-src="img/thumb_foreverisntendlessafterall.jpg"
-                alt="Vector Meditation thumbnail"
-                class="main__img lazyload"
-              />
-              <span class="main__link-text"
-                >Vector Meditation
+					</a>
+				</li>
+			</ul>
+			<ul class="main__list main__list--right">
+				<h1 class="main__title">Art</h1>
+				<li class="main__item">
+					<a href="#forever" class="main__link">
+						<img src="img/thumb_foreverisntendlessafterall.jpg" alt="Vector Meditation thumbnail" class="main__img" />
+						<span class="main__link-text">Vector Meditation
                 <strong class="main__link-subtitle">Digital Art Series</strong>
-              </span>
-            </a>
-          </li>
-          <li class="main__item">
-            <a href="#thankyoufornottoxicwasting" class="main__link">
-              <img
-                data-src="img/thumb_thankyoufornottoxicwasting.jpg"
-                alt="Thank You For Not Toxic Wasting thumbnail"
-                class="main__img lazyload"
-              />
-              <span class="main__link-text"
-                >Thank You For Not Toxic Wasting
+              </span> </a>
+				</li>
+				<li class="main__item">
+					<a href="#thankyoufornottoxicwasting" class="main__link">
+						<img src="img/thumb_thankyoufornottoxicwasting.jpg" alt="Thank You For Not Toxic Wasting thumbnail" class="main__img" />
+						<span class="main__link-text">Thank You For Not Toxic Wasting
                 <strong class="main__link-subtitle">Trash Art</strong>
               </span>
-            </a>
-          </li>
-
-          <li class="main__item">
-            <a href="#qrft-gallery" class="main__link">
-              <img
-                data-src="img/thumb_qrft.jpg"
-                alt="QRFT-Gallery - Poormans NFT thumbnail"
-                class="main__img lazyload"
-              />
-              <span class="main__link-text"
-                >QRFT Gallery (Poormans NFT)
+						</a>
+				</li>
+				<li class="main__item">
+					<a href="#qrft-gallery" class="main__link">
+						<img src="img/thumb_qrft.jpg" alt="QRFT-Gallery - Poormans NFT thumbnail" class="main__img" />
+						<span class="main__link-text">QRFT Gallery (Poormans NFT)
                 <strong class="main__link-subtitle">Digital Streetart</strong>
               </span>
-            </a>
-          </li>
-          <li class="main__item">
-            <a href="#visualisationbb" class="main__link">
-              <img
-                data-src="img/mask.gif"
-                alt="Break Them All thumbnail"
-                class="main__img lazyload"
-              />
-              <span class="main__link-text"
-                >Break Them All
-                <strong class="main__link-subtitle"
-                  >Visualisation and concept for Private Function</strong
-                >
+					</a>
+				</li>
+				<li class="main__item">
+					<a href="#visualisationbb" class="main__link">
+						<img src="img/mask.gif" alt="Break Them All thumbnail" class="main__img" />
+						<span class="main__link-text">Break Them All
+                <strong class="main__link-subtitle">Visualisation and concept for Private Function</strong>
               </span>
-            </a>
-          </li>
-
-          <li class="main__item">
-            <a href="#gourmetgoons" class="main__link">
-              <img
-                data-src="img/thumb_gourmetgoons.jpg"
-                alt="Gourmet Goons thumbnail"
-                class="main__img lazyload"
-              />
-              <span class="main__link-text"
-                >Gourmet Goons
+					</a>
+				</li>
+				<li class="main__item">
+					<a href="#gourmetgoons" class="main__link">
+						<img src="img/thumb_gourmetgoons.jpg" alt="Gourmet Goons thumbnail" class="main__img" />
+						<span class="main__link-text">Gourmet Goons
                 <strong class="main__link-subtitle">Animated 2.5D Short</strong>
               </span>
-            </a>
-          </li>
-        </ul>
-      </main>
-
-      <div class="lb" id="vv-machine">
-        <article class="lb__content">
-          <div class="lb__item">
-            <h1 class="lb__title">VV-Machine</h1>
-          </div>
-          <div class="lb__item lb__item--col-15">
-            <p>
-              Veera Vartiainen (VV-Machine) is a digital designer and an artist
-              focusing on the fun side of internet and next step in creation.
-              VV-Machine is can produce diverse concept and visual designs that
-              correlate with the customer’s needs and tickle their sense of
-              aestetics and vision. On top of her work as a digital designer she
-              does variety of different art and creative projects from . Her
-              experience in both fields has enabled her to use creativity for
-              design while being fully aware of the distinction between the two
-              intertwining their elements when necessary.
-            </p>
-            <p>
-              Her work, in both design and art, is greatly influenced by her
-              travels over the past decade. She has built a solid professional
-              ground whilst on road and her travels has made a mark on her work.
-              The realisations that occur while observing and reflecting on
-              other cultures has made her more aware of hidden attitudes and
-              beliefs that dictate our actions. Stereotypes, world views, and
-              cultures are a starting point in many of her art pieces and her
-              work often explores the hidden that lingers beneath the surface.
-            </p>
-          </div>
-          <div class="lb__item lb__item--col-6">
-            <ul class="lb__list">
-              <h2 class="lb__subtitle">Skills</h2>
-              <li>Graphic Design</li>
-              <li>Illustration</li>
-              <li>Animation</li>
-              <li>Web Design and Development</li>
-              <li>Adobe Creative Suite</li>
-              <li>Wordpress</li>
-              <li>Web Animation</li>
-              <li>HTML</li>
-              <li>CSS3</li>
-              <li>SASS</li>
-              <li>Jquery</li>
-              <li>Figma</li>
-              <li>SVG</li>
-              <li>GIF</li>
-            </ul>
-          </div>
-          <div class="lb__item lb__item--col-6">
-            <ul class="lb__list">
-              <h2 class="lb__subtitle">In Co operation</h2>
-              <li>Seam Studios</li>
-              <li>Marlea</li>
-              <li>Walmu</li>
-              <li>Pehmeä Vandalismi</li>
-              <li>Street Art Vantaa</li>
-              <li>Shaman Creative</li>
-            </ul>
-          </div>
-        </article>
-        <button class="lb__button button">&#10005;</button>
-      </div>
-
-      <div class="lb" id="forever">
-        <article class="lb__content">
-          <div class="lb__item lb__item--col-15">
-            <h1>
+					</a>
+				</li>
+			</ul>
+		</main>
+		<div class="lb" id="vv-machine">
+			<article class="lb__content">
+				<div class="lb__item">
+					<h1 class="lb__title">VV-Machine</h1> </div>
+				<div class="lb__item lb__item--col-15">
+					<p> Veera Vartiainen (VV-Machine) is a digital designer and an artist focusing on the fun side of internet and next step in creation. VV-Machine is can produce diverse concept and visual designs that correlate with the customer’s needs and tickle their sense of aestetics and vision. On top of her work as a digital designer she does variety of different art and creative projects from . Her experience in both fields has enabled her to use creativity for design while being fully aware of the distinction between the two intertwining their elements when necessary. </p>
+					<p> Her work, in both design and art, is greatly influenced by her travels over the past decade. She has built a solid professional ground whilst on road and her travels has made a mark on her work. The realisations that occur while observing and reflecting on other cultures has made her more aware of hidden attitudes and beliefs that dictate our actions. Stereotypes, world views, and cultures are a starting point in many of her art pieces and her work often explores the hidden that lingers beneath the surface. </p>
+				</div>
+				<div class="lb__item lb__item--col-6">
+					<ul class="lb__list">
+						<h2 class="lb__subtitle">Skills</h2>
+						<li>Graphic Design</li>
+						<li>Illustration</li>
+						<li>Animation</li>
+						<li>Web Design and Development</li>
+						<li>Adobe Creative Suite</li>
+						<li>Wordpress</li>
+						<li>Web Animation</li>
+						<li>HTML</li>
+						<li>CSS3</li>
+						<li>SASS</li>
+						<li>Jquery</li>
+						<li>Figma</li>
+						<li>SVG</li>
+						<li>GIF</li>
+					</ul>
+				</div>
+				<div class="lb__item lb__item--col-6">
+					<ul class="lb__list">
+						<h2 class="lb__subtitle">In Co operation</h2>
+						<li>Seam Studios</li>
+						<li>Marlea</li>
+						<li>Walmu</li>
+						<li>Pehmeä Vandalismi</li>
+						<li>Street Art Vantaa</li>
+						<li>Shaman Creative</li>
+					</ul>
+				</div>
+			</article>
+			<button class="lb__button button">&#10005;</button>
+		</div>
+		<div class="lb" id="forever">
+			<article class="lb__content">
+				<div class="lb__item lb__item--col-15">
+					<h1>
               Vector Meditation
               <strong>Digital art series</strong>
-            </h1>
-            <strong>2016-2021</strong>
-          </div>
-
-          <div class="lb__item lb__item--col-15">
-            <p>
-              Vector Meditation is a digital art series that was made using
-              Scalable Vector Graphics. The images were first sketched by hand
-              during travels, mostly on little sheets of random crap paper with
-              whatever pencils on hand. Capturing the moments of reflection when
-              one realises the similarities and differences of one’s own
-              worldview compared to other worldviews. These sketches were then
-              combined and made digital.
-            </p>
-            <p>
-              Vector artwork combined with scalable layer styles in Photoshop
-              enables flexibility in creation and utilization of the artwork.
-              The point is to be able to mix and match shapes and images, reuse
-              them so that something completely new is created from known or
-              used imagery. Vector Meditation series was created to challenge
-              the fast-art culture, with an aim to reuse and distribute shapes
-              on different surfaces and purposes.
-            </p>
-          </div>
-          <div class="lb__item lb__item--col-15">
-            <h2>Forever isn't Endless</h2>
-            <strong>2021</strong>
-          </div>
-
-          <div class="lb__item lb__item--col-15">
-            <img
-              data-src="img/foreverisntendlessafterall.jpg"
-              alt="Forever Isn't Endless After All digital art"
-              class="lb__img lb__img lazyload"
-            />
-          </div>
-          <div class="lb__item lb__item--col-15">
-            <p>
-              Exploring the necessary depth of detail. The dreamy dance of
-              "Forever isn't Endless" is a hot and messy party of mindmelting
-              characters and shapes.
-            </p>
-          </div>
-          <div class="lb__item lb__item--col-6">
-            <h3>Vectors</h3>
-            <img
-              data-src="img/foreverisntendless_vector.jpg"
-              alt="Forever Isn't Endless After All vector"
-              class="lb__img lazyload"
-            />
-          </div>
-          <div class="lb__item lb__item--col-6">
-            <h3>Sketch</h3>
-            <img
-              data-src="img/foreverisntendless_drawing.jpg"
-              alt="Forever Isn't Endless After All original sketch"
-              class="lb__img lazyload"
-            />
-          </div>
-
-          <div class="lb__item lb__item--col-15">
-            <h2>Tripolar Disorder</h2>
-            <strong>2017</strong>
-          </div>
-
-          <div class="lb__item lb__item--col-15">
-            <img
-              data-src="img/tripolardisorder.jpg"
-              alt="Tripolar Disorder digital art"
-              class="lb__img lazyload"
-            />
-          </div>
-          <div class="lb__item lb__item--col-15">
-            <p>
-              Celebrating the colourfulness of the human mind and its senses.
-              Instead of a dualistic interpretation of our realities we could
-              broaden our thinking model to trialism?
-            </p>
-          </div>
-
-          <div class="lb__item lb__item--col-6">
-            <h3>Vectors</h3>
-            <img
-              data-src="img/tripolardisorder_vector.jpg"
-              alt="Tripolar Disorder vector"
-              class="lb__img lazyload"
-            />
-          </div>
-          <div class="lb__item lb__item--col-6">
-            <h3>Sketch</h3>
-            <img
-              data-src="img/tripolardisorder_model.png"
-              alt="Tripolar Disorder original sketch"
-              class="lb__img lazyload"
-            />
-          </div>
-
-          <div class="lb__item lb__item--col-15">
-            <h2>Originating</h2>
-            <strong>2018</strong>
-          </div>
-
-          <div class="lb__item lb__item--col-15">
-            <img
-              data-src="img/originating.jpg"
-              alt="Originating digital art"
-              class="lb__img lazyload"
-            />
-          </div>
-          <div class="lb__item lb__item--col-15">
-            <p>
-              The butterfly effect of our senses and reactions and the way they
-              radiate and effect our surroundings. The senses move inwards and
-              outwards shaping our past, present, and future. Acceptance and
-              compassion makes us more resilient and socially sustainable.
-            </p>
-          </div>
-          <div class="lb__item lb__item--col-6">
-            <h3>Vectors</h3>
-            <img
-              data-src="img/originating_vector.jpg"
-              alt="Originating vector"
-              class="lb__img lazyload"
-            />
-          </div>
-          <div class="lb__item lb__item--col-6">
-            <h3>Sketch</h3>
-            <img
-              data-src="img/originating_model.png"
-              alt="Originating original drawing"
-              class="lb__img lazyload"
-            />
-          </div>
-
-          <div class="lb__item lb__item--col-15">
-            <h2>Eaglelity</h2>
-            <strong>2017</strong>
-          </div>
-          <div class="lb__item lb__item--col-15">
-            <img
-              data-src="img/eaglelity.jpg"
-              alt="Eaglelity digital art"
-              class="lb__img lazyload"
-            />
-          </div>
-
-          <div class="lb__item lb__item--col-15">
-            <p>
-              What is regarded as noble, how to be proud and where to find
-              reason? When to reserve oneself and when to put it out there? How
-              to grow and what is improvement?
-            </p>
-          </div>
-
-          <div class="lb__item lb__item--col-6">
-            <h3>Vectors</h3>
-            <img
-              data-src="img/eaglelity_vectors.jpg"
-              alt="Eaglelity vector"
-              class="lb__img lazyload"
-            />
-          </div>
-          <div class="lb__item lb__item--col-6">
-            <h3>Sketch</h3>
-            <img
-              data-src="img/eaglelity_model.png"
-              alt="Eaglelity original sketch"
-              class="lb__img lazyload"
-            />
-          </div>
-        </article>
-        <button class="lb__button button">&#10005;</button>
-      </div>
-
-      <div class="lb" id="logoandicondesign">
-        <article class="lb__content">
-          <div class="lb__item lb__item--col-15">
-            <h1>
+            </h1> <strong>2016-2021</strong> </div>
+				<div class="lb__item lb__item--col-15">
+					<p> Vector Meditation is a digital art series that was made using Scalable Vector Graphics. The images were first sketched by hand during travels, mostly on little sheets of random crap paper with whatever pencils on hand. Capturing the moments of reflection when one realises the similarities and differences of one’s own worldview compared to other worldviews. These sketches were then combined and made digital. </p>
+					<p> Vector artwork combined with scalable layer styles in Photoshop enables flexibility in creation and utilization of the artwork. The point is to be able to mix and match shapes and images, reuse them so that something completely new is created from known or used imagery. Vector Meditation series was created to challenge the fast-art culture, with an aim to reuse and distribute shapes on different surfaces and purposes. </p>
+				</div>
+				<div class="lb__item lb__item--col-15">
+					<h2>Forever isn't Endless</h2> <strong>2021</strong> </div>
+				<div class="lb__item lb__item--col-15"> <img data-src="img/foreverisntendlessafterall.jpg" alt="Forever Isn't Endless After All digital art" class="lb__img lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-15">
+					<p> Exploring the necessary depth of detail. The dreamy dance of "Forever isn't Endless" is a hot and messy party of mindmelting characters and shapes. </p>
+				</div>
+				<div class="lb__item lb__item--col-6">
+					<h3>Vectors</h3> <img data-src="img/foreverisntendless_vector.jpg" alt="Forever Isn't Endless After All vector" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-6">
+					<h3>Sketch</h3> <img data-src="img/foreverisntendless_drawing.jpg" alt="Forever Isn't Endless After All original sketch" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-15">
+					<h2>Tripolar Disorder</h2> <strong>2017</strong> </div>
+				<div class="lb__item lb__item--col-15"> <img data-src="img/tripolardisorder.jpg" alt="Tripolar Disorder digital art" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-15">
+					<p> Celebrating the colourfulness of the human mind and its senses. Instead of a dualistic interpretation of our realities we could broaden our thinking model to trialism? </p>
+				</div>
+				<div class="lb__item lb__item--col-6">
+					<h3>Vectors</h3> <img data-src="img/tripolardisorder_vector.jpg" alt="Tripolar Disorder vector" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-6">
+					<h3>Sketch</h3> <img data-src="img/tripolardisorder_model.png" alt="Tripolar Disorder original sketch" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-15">
+					<h2>Originating</h2> <strong>2018</strong> </div>
+				<div class="lb__item lb__item--col-15"> <img data-src="img/originating.jpg" alt="Originating digital art" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-15">
+					<p> The butterfly effect of our senses and reactions and the way they radiate and effect our surroundings. The senses move inwards and outwards shaping our past, present, and future. Acceptance and compassion makes us more resilient and socially sustainable. </p>
+				</div>
+				<div class="lb__item lb__item--col-6">
+					<h3>Vectors</h3> <img data-src="img/originating_vector.jpg" alt="Originating vector" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-6">
+					<h3>Sketch</h3> <img data-src="img/originating_model.png" alt="Originating original drawing" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-15">
+					<h2>Eaglelity</h2> <strong>2017</strong> </div>
+				<div class="lb__item lb__item--col-15"> <img data-src="img/eaglelity.jpg" alt="Eaglelity digital art" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-15">
+					<p> What is regarded as noble, how to be proud and where to find reason? When to reserve oneself and when to put it out there? How to grow and what is improvement? </p>
+				</div>
+				<div class="lb__item lb__item--col-6">
+					<h3>Vectors</h3> <img data-src="img/eaglelity_vectors.jpg" alt="Eaglelity vector" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-6">
+					<h3>Sketch</h3> <img data-src="img/eaglelity_model.png" alt="Eaglelity original sketch" class="lb__img lazyload" /> </div>
+			</article>
+			<button class="lb__button button">&#10005;</button>
+		</div>
+		<div class="lb" id="logoandicondesign">
+			<article class="lb__content">
+				<div class="lb__item lb__item--col-15">
+					<h1>
               Logo and Icon Design
               <strong
                 >Various designs of logos, icons, emblems and symbols throughout
                 the years</strong
               >
-            </h1>
-          </div>
-          <div class="lb__item lb__item--col-15">
-            <img
-              data-src="img/kaupunkikeidas.png"
-              alt="Kaupunkikeidas logo design"
-              class="lb__img lb__img--auto lazyload"
-            />
-            <img
-              data-src="img/kaupunkikeidas_icondesign.png"
-              alt=""
-              class="lb__img lb__img--auto lazyload"
-            />
-            <h3>Kaupunkikeidas (2017)</h3>
-            <p>Logo and Icon Design</p>
-          </div>
-
-          <div class="lb__item lb__item--topspace lb__item--col-14">
-            <img
-              data-src="img/steemit.png"
-              alt="Steemit logo design"
-              class="lb__img lb__img--half lazyload"
-            />
-            <img
-              data-src="img/steemit_white.png"
-              alt=""
-              class="lb__img lb__img--half lazyload"
-            />
-            <h3>Steemit (2015)</h3>
-            <p>Logo Design</p>
-          </div>
-
-          <div class="lb__item lb__item--topspace lb__item--col-5">
-            <img
-              data-src="img/dawn.png"
-              alt="Dawn logo design"
-              class="lb__img lazyload"
-            />
-            <h3>Dawn (2016)</h3>
-            <p>Logo Design</p>
-            <img
-              data-src="img/kiventures.png"
-              alt=""
-              class="lb__img lb__img--margintop lazyload"
-            />
-            <h3>Kiventures <strong>2014</strong></h3>
-            <p>Logo Design</p>
-          </div>
-          <div class="lb__item lb__item--topspace lb__item--col-4">
-            <img
-              data-src="img/paris_emblem.png"
-              alt="Paris emblem design"
-              class="lb__img lazyload"
-            />
-            <h3>Paris (2017)</h3>
-            <p>Emblem Design</p>
-          </div>
-        </article>
-        <button class="lb__button button">&#10005;</button>
-      </div>
-
-      <div class="lb" id="qrft-gallery">
-        <article class="lb__content">
-          <div class="lb__item lb__item--col-15">
-            <h1>
+            </h1> </div>
+				<div class="lb__item lb__item--col-15"> <img data-src="img/kaupunkikeidas.png" alt="Kaupunkikeidas logo design" class="lb__img lb__img--auto lazyload" /> <img data-src="img/kaupunkikeidas_icondesign.png" alt="" class="lb__img lb__img--auto lazyload" />
+					<h3>Kaupunkikeidas (2017)</h3>
+					<p>Logo and Icon Design</p>
+				</div>
+				<div class="lb__item lb__item--topspace lb__item--col-14"> <img data-src="img/steemit.png" alt="Steemit logo design" class="lb__img lb__img--half lazyload" /> <img data-src="img/steemit_white.png" alt="" class="lb__img lb__img--half lazyload" />
+					<h3>Steemit (2015)</h3>
+					<p>Logo Design</p>
+				</div>
+				<div class="lb__item lb__item--topspace lb__item--col-5"> <img data-src="img/dawn.png" alt="Dawn logo design" class="lb__img lazyload" />
+					<h3>Dawn (2016)</h3>
+					<p>Logo Design</p> <img data-src="img/kiventures.png" alt="" class="lb__img lb__img--margintop lazyload" />
+					<h3>Kiventures <strong>2014</strong></h3>
+					<p>Logo Design</p>
+				</div>
+				<div class="lb__item lb__item--topspace lb__item--col-4"> <img data-src="img/paris_emblem.png" alt="Paris emblem design" class="lb__img lazyload" />
+					<h3>Paris (2017)</h3>
+					<p>Emblem Design</p>
+				</div>
+			</article>
+			<button class="lb__button button">&#10005;</button>
+		</div>
+		<div class="lb" id="qrft-gallery">
+			<article class="lb__content">
+				<div class="lb__item lb__item--col-15">
+					<h1>
               QRFT Gallery - Poormans NFT
               <strong>VV-machine x Pehmeä Vandalismi x S.A.V</strong>
-            </h1>
-            <strong
-              >Various designs of logos, icons, emblems and symbols throughout
+            </h1> <strong>Various designs of logos, icons, emblems and symbols throughout
               the years</strong
             >
             <strong>2021</strong>
-            <p>
-              <a href="https://www.savtaide.fi/" target="_blank"
-                >S.A.V (Street Art Vantaa)</a
+					<p> <a href="https://www.savtaide.fi/" target="_blank">S.A.V (Street Art Vantaa)</a
               >
               invited
               <a href="https://www.pehmeavandalismi.com/" target="_blank"
@@ -915,468 +616,141 @@
               combined with traditional Australian Indigenous Cartography and
               Symbology. The project also involved designing creating a
               narrative interactive 2D animation concept. Cartographic Design
-              was made using <a href="" target="_blank">Mapbox API</a>.
-            </p>
-          </div>
-          <div class="lb__item lb__item--col-15">
-            <h2>Modular Logo</h2>
-          </div>
-          <div class="lb__item lb__item--col-5">
-            <img
-              data-src="img/storymaps/SM_logo.svg"
-              alt="Story Maps Australia Logo"
-              class="lb__item--col-3 lb__img lazyload"
-            />
-          </div>
-          <div class="lb__item lb__item--col-15">
-            <p>
-              The logo for the Story Maps Australia –project combines feet
-              symbol with a modern speech bubble. The design is meant to
-              communicate between the new and the old world view.
-            </p>
-          </div>
-          <div class="lb__item lb__item--col-15">
-            <h3>Map Markers based on the Modular Logo</h3>
-          </div>
-          <div class="lb__item lb__item--col-2">
-            <img
-              data-src="img/storymaps/mapmarker_aboriginalart.svg"
-              class="lb__img lazyload"
-              alt="Story Maps Map Marker indigenous art"
-            />
-          </div>
-          <div class="lb__item lb__item--col-2">
-            <img
-              data-src="img/storymaps/mapmarker_smiley.svg"
-              alt="Story Maps Map Marker Smiley"
-              class="lb__img lazyload"
-            />
-          </div>
-
-          <div class="lb__item lb__item--col-2">
-            <img
-              data-src="img/storymaps/mapmarker_kangaroo.svg"
-              alt="Story Maps Map Marker Kangaroo"
-              class="lb__img lazyload"
-            />
-          </div>
-
-          <div class="lb__item lb__item--col-2">
-            <img
-              data-src="img/storymaps/mapmarker_flower.svg"
-              alt="Story Maps Map Marker Flower"
-              class="lb__img lazyload"
-            />
-          </div>
-
-          <div class="lb__item lb__item--col-2">
-            <img
-              data-src="img/storymaps/mapmarker_symbol.svg"
-              alt="Story Maps Map Marker Symbol"
-              class="lb__img lazyload"
-            />
-          </div>
-
-          <div class="lb__item lb__item--col-2">
-            <img
-              data-src="img/storymaps/mapmarker_text.svg"
-              alt="Story Maps Map Marker Text"
-              class="lb__img lazyload"
-            />
-          </div>
-
-          <div class="lb__item lb__item--col-15">
-            <p>
-              Modularity of the Logo allows to create custom Map Markers in a
-              form a speech bubble. The content of a Map Marker can be a photo,
-              a symbol or text.
-            </p>
-          </div>
-          <div class="lb__item lb__item--topspace lb__item--col-15">
-            <h2>Iconography</h2>
-          </div>
-          <div class="lb__item lb__item--col-2">
-            <img
-              data-src="img/storymaps/eat.svg"
-              alt="Story Maps Australia Icon Eat"
-              class="lb__img lazyload"
-            />
-          </div>
-          <div class="lb__item lb__item--col-2">
-            <img
-              data-src="img/storymaps/sleep.svg"
-              alt="Story Maps Australia Icon Sleep"
-              class="lb__img lazyload"
-            />
-          </div>
-          <div class="lb__item lb__item--col-2">
-            <img
-              data-src="img/storymaps/experience.svg"
-              alt="Story Maps Australia Icon Experience"
-              class="lb__img lazyload"
-            />
-          </div>
-          <div class="lb__item lb__item--col-2">
-            <img
-              data-src="img/storymaps/today.svg"
-              alt="Story Maps Australia Icon Today"
-              class="lb__img lazyload"
-            />
-          </div>
-          <div class="lb__item lb__item--col-2">
-            <img
-              data-src="img/storymaps/geology-01.svg"
-              alt="Story Maps Australia Icon Geology"
-              class="lb__img lazyload"
-            />
-          </div>
-          <div class="lb__item lb__item--col-2">
-            <img
-              data-src="img/storymaps/dreaming.svg"
-              alt="Story Maps Australia Icon Dreaming"
-              class="lb__img lazyload"
-            />
-          </div>
-          <break></break>
-
-          <div class="lb__item lb__item--col-2">
-            <img
-              data-src="img/storymaps/fauna.svg"
-              alt="Story Maps Australia Fauna"
-              class="lb__img lazyload"
-            />
-          </div>
-          <div class="lb__item lb__item--col-2">
-            <img
-              data-src="img/storymaps/spirituality.svg"
-              alt="Story Maps Australia Spirituality"
-              class="lb__img lazyload"
-            />
-          </div>
-          <div class="lb__item lb__item--col-2">
-            <img
-              data-src="img/storymaps/colonalisation.svg"
-              alt="Story Maps Australia Colonialisation"
-              class="lb__img lazyload"
-            />
-          </div>
-          <div class="lb__item lb__item--col-2">
-            <img
-              data-src="img/storymaps/culture.svg"
-              alt="Story Maps Australia Culture"
-              class="lb__img lazyload"
-            />
-          </div>
-          <div class="lb__item lb__item--col-2">
-            <img
-              data-src="img/storymaps/purchase.svg"
-              alt="Story Maps Australia Purchase"
-              class="lb__img lazyload"
-            />
-          </div>
-          <div class="lb__item lb__item--col-2">
-            <img
-              data-src="img/storymaps/piece.svg"
-              alt="Story Maps Australia Piece"
-              class="lb__img lazyload"
-            />
-          </div>
-
-          <div class="lb__item lb__item--col-15">
-            <p>
-              The Iconography is based on Indigenous Australian Symbology and
-              Cartography. Hand drawn style of the Icons is to bring them closer
-              to sand art, wood carving, cave painting and other traditional
-              forms of Indigenous Australian Art.
-            </p>
-          </div>
-          <div class="lb__item lb__item--topspace lb__item--col-15">
-            <h2>Animation</h2>
-          </div>
-          <div class="lb__item lb__item--col-15">
-            <img
-              data-src="img/SM_snake.gif"
-              alt="Story Maps Australia Rainbow Serpent animation"
-              class="lb__img lazyload"
-            />
-            <p>
-              Rainbow serpent, a life giving deity, is a common motif amongst
-              Astralian Indigenous art. The story of the Rainbow serpent is
-              essential amongst the Australian Aboriginal peoples and is
-              important in the Dreamtime worldview. The serpent is viewed as a
-              giver of life but is also a destructive force once angered.
-            </p>
-          </div>
-          <div class="lb__item lb__item--col-15">
-            <img
-              data-src="img/SM_flora.gif"
-              alt="Story Maps Australia Flora and Fauna animation"
-              class="lb__img lazyload"
-            />
-            <p>
-              Indigenous Australian spirituality is totemic where a plant or an
-              animal can act as a spiritual emblem. A big part of that
-              spirituality is a connection to nature and the connectedness
-              between the past, present, and future which creates a system that
-              is used for navigation, health care, and nutrition.
-            </p>
-          </div>
-          <div class="lb__item lb__item--col-15">
-            <img
-              data-src="img/spiritman.gif"
-              alt="Story Maps Australia Elder animation"
-              class="lb__img lazyload"
-            />
-            <p>
-              The Dreamtime worldview is manifested in everyday life through
-              sacred and ancient places and tools that are known to Indigenous
-              Australian peoples through generations. These places and tools are
-              a fundamental part of the Dreamtime worldview. The man in the
-              middle of the map represents an elder, or a sort of shaman, that
-              is highly respected in the community and represents the flow of
-              knowledge that passes through generations.
-            </p>
-          </div>
-          <div class="lb__item lb__item--col-15">
-            <h2>Map Design with Mapbox Studio</h2>
-            <div id="map" class="lb__img"></div>
-            <p>
-              Map Topography is created with Mapbox Studios API, which bases on
-              SCSS and ...
-            </p>
-          </div>
-        </article>
-        <button class="lb__button button">&#10005;</button>
-      </div>
-
-      <div class="lb" id="gourmetgoons">
-        <article class="lb__content">
-          <div class="lb__item lb__item--col-15">
-            <h1>
+              was made using <a href="" target="_blank">Mapbox API</a>. </p>
+				</div>
+				<div class="lb__item lb__item--col-15">
+					<h2>Modular Logo</h2> </div>
+				<div class="lb__item lb__item--col-5"> <img data-src="img/storymaps/SM_logo.svg" alt="Story Maps Australia Logo" class="lb__item--col-3 lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-15">
+					<p> The logo for the Story Maps Australia –project combines feet symbol with a modern speech bubble. The design is meant to communicate between the new and the old world view. </p>
+				</div>
+				<div class="lb__item lb__item--col-15">
+					<h3>Map Markers based on the Modular Logo</h3> </div>
+				<div class="lb__item lb__item--col-2"> <img data-src="img/storymaps/mapmarker_aboriginalart.svg" class="lb__img lazyload" alt="Story Maps Map Marker indigenous art" /> </div>
+				<div class="lb__item lb__item--col-2"> <img data-src="img/storymaps/mapmarker_smiley.svg" alt="Story Maps Map Marker Smiley" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-2"> <img data-src="img/storymaps/mapmarker_kangaroo.svg" alt="Story Maps Map Marker Kangaroo" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-2"> <img data-src="img/storymaps/mapmarker_flower.svg" alt="Story Maps Map Marker Flower" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-2"> <img data-src="img/storymaps/mapmarker_symbol.svg" alt="Story Maps Map Marker Symbol" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-2"> <img data-src="img/storymaps/mapmarker_text.svg" alt="Story Maps Map Marker Text" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-15">
+					<p> Modularity of the Logo allows to create custom Map Markers in a form a speech bubble. The content of a Map Marker can be a photo, a symbol or text. </p>
+				</div>
+				<div class="lb__item lb__item--topspace lb__item--col-15">
+					<h2>Iconography</h2> </div>
+				<div class="lb__item lb__item--col-2"> <img data-src="img/storymaps/eat.svg" alt="Story Maps Australia Icon Eat" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-2"> <img data-src="img/storymaps/sleep.svg" alt="Story Maps Australia Icon Sleep" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-2"> <img data-src="img/storymaps/experience.svg" alt="Story Maps Australia Icon Experience" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-2"> <img data-src="img/storymaps/today.svg" alt="Story Maps Australia Icon Today" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-2"> <img data-src="img/storymaps/geology-01.svg" alt="Story Maps Australia Icon Geology" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-2"> <img data-src="img/storymaps/dreaming.svg" alt="Story Maps Australia Icon Dreaming" class="lb__img lazyload" /> </div>
+				<break></break>
+				<div class="lb__item lb__item--col-2"> <img data-src="img/storymaps/fauna.svg" alt="Story Maps Australia Fauna" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-2"> <img data-src="img/storymaps/spirituality.svg" alt="Story Maps Australia Spirituality" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-2"> <img data-src="img/storymaps/colonalisation.svg" alt="Story Maps Australia Colonialisation" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-2"> <img data-src="img/storymaps/culture.svg" alt="Story Maps Australia Culture" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-2"> <img data-src="img/storymaps/purchase.svg" alt="Story Maps Australia Purchase" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-2"> <img data-src="img/storymaps/piece.svg" alt="Story Maps Australia Piece" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-15">
+					<p> The Iconography is based on Indigenous Australian Symbology and Cartography. Hand drawn style of the Icons is to bring them closer to sand art, wood carving, cave painting and other traditional forms of Indigenous Australian Art. </p>
+				</div>
+				<div class="lb__item lb__item--topspace lb__item--col-15">
+					<h2>Animation</h2> </div>
+				<div class="lb__item lb__item--col-15"> <img data-src="img/SM_snake.gif" alt="Story Maps Australia Rainbow Serpent animation" class="lb__img lazyload" />
+					<p> Rainbow serpent, a life giving deity, is a common motif amongst Astralian Indigenous art. The story of the Rainbow serpent is essential amongst the Australian Aboriginal peoples and is important in the Dreamtime worldview. The serpent is viewed as a giver of life but is also a destructive force once angered. </p>
+				</div>
+				<div class="lb__item lb__item--col-15"> <img data-src="img/SM_flora.gif" alt="Story Maps Australia Flora and Fauna animation" class="lb__img lazyload" />
+					<p> Indigenous Australian spirituality is totemic where a plant or an animal can act as a spiritual emblem. A big part of that spirituality is a connection to nature and the connectedness between the past, present, and future which creates a system that is used for navigation, health care, and nutrition. </p>
+				</div>
+				<div class="lb__item lb__item--col-15"> <img data-src="img/spiritman.gif" alt="Story Maps Australia Elder animation" class="lb__img lazyload" />
+					<p> The Dreamtime worldview is manifested in everyday life through sacred and ancient places and tools that are known to Indigenous Australian peoples through generations. These places and tools are a fundamental part of the Dreamtime worldview. The man in the middle of the map represents an elder, or a sort of shaman, that is highly respected in the community and represents the flow of knowledge that passes through generations. </p>
+				</div>
+				<div class="lb__item lb__item--col-15">
+					<h2>Map Design with Mapbox Studio</h2>
+					<div id="map" class="lb__img"></div>
+					<p> Map Topography is created with Mapbox Studios API, which bases on SCSS and ... </p>
+				</div>
+			</article>
+			<button class="lb__button button">&#10005;</button>
+		</div>
+		<div class="lb" id="gourmetgoons">
+			<article class="lb__content">
+				<div class="lb__item lb__item--col-15">
+					<h1>
               Gourmet Goons
               <strong>Animated 2.5D Short</strong>
-            </h1>
-            <strong>2014</strong>
-            <p>
-              Animated 2.5D short that was created for an opening of a travel
-              cooking show in Australia. The short was based on travel photos
-              and created as a 2.5D animation using After Effect.
-            </p>
-          </div>
-          <div class="lb__item lb__item--col-15">
-            <div class="lb__iframecontainer">
-              <iframe
-                src="https://player.vimeo.com/video/104087126?h=117115109f"
-                width="750px"
-                height="400px"
-                frameborder="0"
-                allow="autoplay; fullscreen; picture-in-picture"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-        </article>
-        <button class="lb__button button">&#10005;</button>
-      </div>
-      <div class="lb" id="storybook">
-        <article class="lb__content">
-          <div class="lb__item lb__item--col-15">
-            <h1>
+            </h1> <strong>2014</strong>
+					<p> Animated 2.5D short that was created for an opening of a travel cooking show in Australia. The short was based on travel photos and created as a 2.5D animation using After Effect. </p>
+				</div>
+				<div class="lb__item lb__item--col-15">
+					<div class="lb__iframecontainer">
+						<iframe src="https://player.vimeo.com/video/104087126?h=117115109f" width="750px" height="400px" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
+			</article>
+			<button class="lb__button button">&#10005;</button>
+		</div>
+		<div class="lb" id="storybook">
+			<article class="lb__content">
+				<div class="lb__item lb__item--col-15">
+					<h1>
               Storybook of Franklinford
               <strong
                 >Custom Wordpress Theme, Interactive animation and Visual
                 Design</strong
               >
-            </h1>
-            <strong>2016</strong>
-            <p>
-              Storybook of Franklinford is web based Flipbook developed with
-              Wordpress. The project involved developing the frontend, creating
-              the required 2D animations and designing the graphics with
-              traditional press style combined with Storybook's magic.
-            </p>
-          </div>
-          <div class="lb__item lb__item--topspace lb__item--col-15">
-            <h2>Animated Flipbook Wordpress Theme with Candlelight</h2>
-            <iframe
-              class="lb__img lazyload"
-              height="550"
-              style="width: 105%; margin-left:-2.5%"
-              scrolling="no"
-              title="CSS Flipbook animation with candlelight"
-              src="https://codepen.io/vv-machine/embed/LYzGdmP?default-tab=result"
-              frameborder="no"
-              loading="lazy"
-              allowtransparency="true"
-              allowfullscreen="true"
-            >
-              See the Pen
-              <a href="https://codepen.io/vv-machine/pen/LYzGdmP">
+            </h1> <strong>2016</strong>
+					<p> Storybook of Franklinford is web based Flipbook developed with Wordpress. The project involved developing the frontend, creating the required 2D animations and designing the graphics with traditional press style combined with Storybook's magic. </p>
+				</div>
+				<div class="lb__item lb__item--topspace lb__item--col-15">
+					<h2>Animated Flipbook Wordpress Theme with Candlelight</h2>
+					<iframe class="lb__img lazyload" height="550" style="width: 105%; margin-left:-2.5%" scrolling="no" title="CSS Flipbook animation with candlelight" src="https://codepen.io/vv-machine/embed/LYzGdmP?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"> See the Pen <a href="https://codepen.io/vv-machine/pen/LYzGdmP">
                 CSS Flipbook animation with candlelight</a
               >
               by vv-machine (<a href="https://codepen.io/vv-machine"
                 >@vv-machine</a
-              >) on <a href="https://codepen.io">CodePen</a>.
-            </iframe>
-            <p>
-              The Animated interface was constructed as Custom Wordpress Theme.
-              The Flipbook Interactive Animation is developed with CSS3
-              transitions and jQuery.
-            </p>
-          </div>
-          <div class="lb__item lb__item--topspace lb__item--col-13">
-            <h2>2d Write in Animation with After Effects</h2>
-            <img
-              data-src="img/sof_writein.gif"
-              alt="Storybook of Franklinford Typography Write in Animation Motion Graphics"
-              class="lb__img lazyload"
-            />
-            <p>
-              The website’s intro, a Write-In Typografic Animation, is created
-              with After Effects. The animated stars and bling brings magic and
-              vividness to otherwise quite traditional typeface.
-            </p>
-            <h3>Loading animation</h3>
-            <img
-              data-src="img/sof_start.gif"
-              alt="Storybook of Franklinford Loading Animation Motion Graphics"
-              class="lb__img lb__img--auto lazyload"
-            />
-            <p>
-              The Loading Animation is a circle of stars, so the transition
-              between loading animation and the intro is smooth.
-            </p>
-          </div>
-          <div class="lb__item lb__item--topspace lb__item--col-15">
-            <h2>Visual Design</h2>
-            <p>
-              Storybook of Franklinford has a comprehensive graphical concept,
-              logo design, icons, drop caps, and text captions.
-            </p>
-          </div>
-          <div class="lb__item lb__item--col-15">
-            <h3>Starstruck Logo</h3>
-            <img
-              data-src="img/sof_logo_colors.png"
-              alt="Storybook of Franklinford Logo Colours Graphic Design"
-              class="lb__img lb__img--half lazyload"
-            />
-            <img
-              data-src="img/sof_logo_white.png"
-              alt="Storybook of Franklinford Logo White Graphic Design"
-              class="lb__img lb__img--half lazyload"
-            />
-            <p>
-              Typografic Logo combines the font
-              <a href="" target="_blank">Starstruck</a> with twirls/cluster of
-              stars for a bit of magic.
-            </p>
-          </div>
-
-          <div class="lb__item lb__item--col-15">
-            <h3>Antique Icons</h3>
-            <img
-              data-src="img/sof_heart.png"
-              alt="Storybook of Franklinford Icon Heart Iconography"
-              class="lb__img lb__img--auto lazyload"
-            />
-            <img
-              data-src="img/sof_film.png"
-              alt="Storybook of Franklinford Icon Film Iconography"
-              class="lb__img lb__img--auto lazyload"
-            />
-            <img
-              data-src="img/sof_music.png"
-              alt="Storybook of Franklinford  Icon Music Iconography"
-              class="lb__img lb__img--auto lazyload"
-            />
-            <img
-              data-src="img/sof_mail.png"
-              alt="Storybook of Franklinford Icon Mail Iconography"
-              class="lb__img lb__img--auto lazyload"
-            />
-            <p>
-              Iconography of Storybook Franklinford is traditional and displays
-              modern concepts like email, mp3 or video with antique versions and
-              traditional symbology.
-            </p>
-          </div>
-
-          <div class="lb__item lb__item--col-15">
-            <h3>Dropcaps</h3>
-            <img
-              data-src="img/sof_dropcap_i.png"
-              alt="Storybook of Franklinford Dropcap I Typography"
-              class="lb__img lb__img--auto lazyload"
-            />
-            <img
-              data-src="img/sof_dropcap_x.png"
-              alt="Storybook of Franklinford Dropcap X Typography"
-              class="lb__img lb__img--auto lazyload"
-            />
-            <img
-              data-src="img/sof_dropcap_o.png"
-              alt="Storybook of Franklinford Dropcap O Typography"
-              class="lb__img lb__img--auto lazyload"
-            />
-            <img
-              data-src="img/sof_dropcap_u.png"
-              alt="Storybook of Franklinford Dropcap U Typography"
-              class="lb__img lb__img--auto lazyload"
-            />
-            <img
-              data-src="img/sof_dropcap_b.png"
-              alt="Storybook of Franklinford Dropcap B Typography"
-              class="lb__img lb__img--auto lazyload"
-            />
-            <img
-              data-src="img/sof_dropcap_bb.png"
-              alt="Storybook of Franklinford Dropcap B Typography"
-              class="lb__img lb__img--auto lazyload"
-            />
-            <p>
-              A different colourful Dropcap start every chapter. Different
-              combinations of background colours and graphics can create
-              multiple different Dropcaps out of just a few graphics.
-            </p>
-          </div>
-
-          <div class="lb__item lb__item--col-14">
-            <h3>Captionboxes</h3>
-            <img
-              data-src="img/sof_captionbox_green.png"
-              alt=""
-              class="lb__img lb__img--twothirds lazyload"
-            />
-            <img
-              data-src="img/sof_captionbox_blue.png"
-              alt=""
-              class="lb__img lb__img--twothirds lazyload"
-            />
-            <p>(Lyrics by Las Ketchup)</p>
-            <p>
-              Caption Boxes designed to match with the Colourful Dropcaps. The
-              elements have a separate image on the top and bottom combined with
-              background colour, so the elements are scalable for different
-              amounts of text.
-            </p>
-          </div>
-        </article>
-        <button class="lb__button button">&#10005;</button>
-      </div>
-
-      <div class="lb" id="seam">
-        <article class="lb__content">
-          <div class="lb__item lb__item--col-15">
-            <h1>
+              >) on <a href="https://codepen.io">CodePen</a>. </iframe>
+					<p> The Animated interface was constructed as Custom Wordpress Theme. The Flipbook Interactive Animation is developed with CSS3 transitions and jQuery. </p>
+				</div>
+				<div class="lb__item lb__item--topspace lb__item--col-13">
+					<h2>2d Write in Animation with After Effects</h2> <img data-src="img/sof_writein.gif" alt="Storybook of Franklinford Typography Write in Animation Motion Graphics" class="lb__img lazyload" />
+					<p> The website’s intro, a Write-In Typografic Animation, is created with After Effects. The animated stars and bling brings magic and vividness to otherwise quite traditional typeface. </p>
+					<h3>Loading animation</h3> <img data-src="img/sof_start.gif" alt="Storybook of Franklinford Loading Animation Motion Graphics" class="lb__img lb__img--auto lazyload" />
+					<p> The Loading Animation is a circle of stars, so the transition between loading animation and the intro is smooth. </p>
+				</div>
+				<div class="lb__item lb__item--topspace lb__item--col-15">
+					<h2>Visual Design</h2>
+					<p> Storybook of Franklinford has a comprehensive graphical concept, logo design, icons, drop caps, and text captions. </p>
+				</div>
+				<div class="lb__item lb__item--col-15">
+					<h3>Starstruck Logo</h3> <img data-src="img/sof_logo_colors.png" alt="Storybook of Franklinford Logo Colours Graphic Design" class="lb__img lb__img--half lazyload" /> <img data-src="img/sof_logo_white.png" alt="Storybook of Franklinford Logo White Graphic Design" class="lb__img lb__img--half lazyload" />
+					<p> Typografic Logo combines the font <a href="" target="_blank">Starstruck</a> with twirls/cluster of stars for a bit of magic. </p>
+				</div>
+				<div class="lb__item lb__item--col-15">
+					<h3>Antique Icons</h3> <img data-src="img/sof_heart.png" alt="Storybook of Franklinford Icon Heart Iconography" class="lb__img lb__img--auto lazyload" /> <img data-src="img/sof_film.png" alt="Storybook of Franklinford Icon Film Iconography" class="lb__img lb__img--auto lazyload" /> <img data-src="img/sof_music.png" alt="Storybook of Franklinford  Icon Music Iconography" class="lb__img lb__img--auto lazyload" /> <img data-src="img/sof_mail.png" alt="Storybook of Franklinford Icon Mail Iconography" class="lb__img lb__img--auto lazyload" />
+					<p> Iconography of Storybook Franklinford is traditional and displays modern concepts like email, mp3 or video with antique versions and traditional symbology. </p>
+				</div>
+				<div class="lb__item lb__item--col-15">
+					<h3>Dropcaps</h3> <img data-src="img/sof_dropcap_i.png" alt="Storybook of Franklinford Dropcap I Typography" class="lb__img lb__img--auto lazyload" /> <img data-src="img/sof_dropcap_x.png" alt="Storybook of Franklinford Dropcap X Typography" class="lb__img lb__img--auto lazyload" /> <img data-src="img/sof_dropcap_o.png" alt="Storybook of Franklinford Dropcap O Typography" class="lb__img lb__img--auto lazyload" /> <img data-src="img/sof_dropcap_u.png" alt="Storybook of Franklinford Dropcap U Typography" class="lb__img lb__img--auto lazyload" /> <img data-src="img/sof_dropcap_b.png" alt="Storybook of Franklinford Dropcap B Typography" class="lb__img lb__img--auto lazyload" /> <img data-src="img/sof_dropcap_bb.png" alt="Storybook of Franklinford Dropcap B Typography" class="lb__img lb__img--auto lazyload" />
+					<p> A different colourful Dropcap start every chapter. Different combinations of background colours and graphics can create multiple different Dropcaps out of just a few graphics. </p>
+				</div>
+				<div class="lb__item lb__item--col-14">
+					<h3>Captionboxes</h3> <img data-src="img/sof_captionbox_green.png" alt="" class="lb__img lb__img--twothirds lazyload" /> <img data-src="img/sof_captionbox_blue.png" alt="" class="lb__img lb__img--twothirds lazyload" />
+					<p>(Lyrics by Las Ketchup)</p>
+					<p> Caption Boxes designed to match with the Colourful Dropcaps. The elements have a separate image on the top and bottom combined with background colour, so the elements are scalable for different amounts of text. </p>
+				</div>
+			</article>
+			<button class="lb__button button">&#10005;</button>
+		</div>
+		<div class="lb" id="seam">
+			<article class="lb__content">
+				<div class="lb__item lb__item--col-15">
+					<h1>
               Seam Studios
               <strong
                 >Lottie Animation, Visual Concept and Graphic Guidelines</strong
               >
             </h1>
-            <p>
-              <a href="https://seam.es/" targer="_blank"
-                >Seam Project Studios</a
+					<p> <a href="https://seam.es/" targer="_blank">Seam Project Studios</a
               >
               is a creative digital agency based in Barcelona. When joining the
               company in 2019 VV-Machine planned a visual concept design for the
@@ -1499,92 +873,36 @@
               <strong>Visual Concept and Graphic Guidelines</strong>
             </h1>
             <p>
-              <a href="https://www.cadpool.fi/" target="_blank">Cadpool</a>
-              course schedule is the company’s course schedule for each year
-              that is sent out to company’s partners annually. They are designed
-              to fit the company’s already existing graphic look with an aim to
-              develop the look further each year.
-            </p>
-          </div>
+              <a href="https://www.cadpool.fi/" target="_blank">Cadpool</a> course schedule is the company’s course schedule for each year that is sent out to company’s partners annually. They are designed to fit the company’s already existing graphic look with an aim to develop the look further each year. </p>
+				</div>
+				<div class="lb__item lb__item--col-15">
+					<h2>Cadpool Course Schedule 2020</h2>
+					<p> Concept and character design was based on a theme ”Finnish Engineering and Innovation” . The character was a 3D model created in Blender software. The rest of the objects and background was created modifying open source 3D models based on Finland and Finnish Innovation. </p> <img data-src="img/cadpool_cover_2020_2021.png" alt="Cadpool Course Schedule 2020-2021 print design brochure cover" class="lb__img lazyload" /> <img data-src="img/cadpool_inside_2020_2021.png" alt="Cadpool Course Schedule 2020-2021 print design brochure inside" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-15">
+					<h2>Cadpool Course Schedule 2019</h2>
+					<p> The theme for the visual concept was the Scandinavian sense of simplicity and minimalism combined with light and snow. The design was created with images from Autodesk Gallery. </p> <img data-src="img/cadpool_cover_2018_2019.png" alt="Cadpool Course Schedule 2018-2019 print design brochure cover" class="lb__img lazyload" /> <img data-src="img/cadpool_inside_2018_2019.png" alt="Cadpool Course Schedule 2018-2019 print design brochure inside" class="lb__img lazyload" /> </div>
+				<div class="lb__item lb__item--col-15">
+					<h2>Cadpool Course Schedule 2016</h2>
+					<p> The theme for the visual concept was ”Playful Engineering”. The look is inspired by the aesthetics of circuit boards, blueprints and gadgets. </p> <img data-src="img/cadpool_cover_2016_2017.png" alt="Cadpool Course Schedule 2016-2017 print design brochure cover" class="lb__img lazyload" /> <img data-src="img/cadpool_inside_2016_2017.png" alt="Cadpool Course Schedule 2016-2017 print design brochure inside" class="lb__img lazyload" /> </div>
+			</article>
+			<button class="lb__button button">&#10005;</button>
+		</div>
+	</div>
+	<!-- END OF WRAPPER -->
+	<footer class="footer">
+		<p>2022 © VV-Shaman Creative</p>
+	</footer>
+	<script src="js/functions.js"></script>
+	<script>
+	mapboxgl.accessToken = 'pk.eyJ1IjoidnYtbWFjaGluZSIsImEiOiJGSkFKOHlJIn0.ePJNIF799i_Rf6ez0Et-Jw';
+	const map = new mapboxgl.Map({
+		container: 'map', // container ID
+		style: 'mapbox://styles/vv-machine/ckuz38e300g1t14mticq9ttp4', // style URL
+		center: [140.149831, -28.258874], // starting position [lng, lat]
+		zoom: 3 // starting zoom
+	});
+	map.resize()
+	</script>
+</body>
 
-          <div class="lb__item lb__item--col-15">
-            <h2>Cadpool Course Schedule 2020</h2>
-            <p>
-              Concept and character design was based on a theme ”Finnish
-              Engineering and Innovation” . The character was a 3D model created
-              in Blender software. The rest of the objects and background was
-              created modifying open source 3D models based on Finland and
-              Finnish Innovation.
-            </p>
-            <img
-              data-src="img/cadpool_cover_2020_2021.png"
-              alt="Cadpool Course Schedule 2020-2021 print design brochure cover"
-              class="lb__img lazyload"
-            />
-            <img
-              data-src="img/cadpool_inside_2020_2021.png"
-              alt="Cadpool Course Schedule 2020-2021 print design brochure inside"
-              class="lb__img lazyload"
-            />
-          </div>
-
-          <div class="lb__item lb__item--col-15">
-            <h2>Cadpool Course Schedule 2019</h2>
-            <p>
-              The theme for the visual concept was the Scandinavian sense of
-              simplicity and minimalism combined with light and snow. The design
-              was created with images from Autodesk Gallery.
-            </p>
-            <img
-              data-src="img/cadpool_cover_2018_2019.png"
-              alt="Cadpool Course Schedule 2018-2019 print design brochure cover"
-              class="lb__img lazyload"
-            />
-            <img
-              data-src="img/cadpool_inside_2018_2019.png"
-              alt="Cadpool Course Schedule 2018-2019 print design brochure inside"
-              class="lb__img lazyload"
-            />
-          </div>
-          <div class="lb__item lb__item--col-15">
-            <h2>Cadpool Course Schedule 2016</h2>
-            <p>
-              The theme for the visual concept was ”Playful Engineering”. The
-              look is inspired by the aesthetics of circuit boards, blueprints
-              and gadgets.
-            </p>
-            <img
-              data-src="img/cadpool_cover_2016_2017.png"
-              alt="Cadpool Course Schedule 2016-2017 print design brochure cover"
-              class="lb__img lazyload"
-            />
-            <img
-              data-src="img/cadpool_inside_2016_2017.png"
-              alt="Cadpool Course Schedule 2016-2017 print design brochure inside"
-              class="lb__img lazyload"
-            />
-          </div>
-        </article>
-        <button class="lb__button button">&#10005;</button>
-      </div>
-    </div>
-    <!-- END OF WRAPPER -->
-
-    <footer class="footer">
-      <p>2022 © VV-Shaman Creative</p>
-    </footer>
-    <script src="js/functions.js"></script>
-
-    <script>
-      	mapboxgl.accessToken = 'pk.eyJ1IjoidnYtbWFjaGluZSIsImEiOiJGSkFKOHlJIn0.ePJNIF799i_Rf6ez0Et-Jw';
-      const map = new mapboxgl.Map({
-      container: 'map', // container ID
-      style: 'mapbox://styles/vv-machine/ckuz38e300g1t14mticq9ttp4', // style URL
-      center: [140.149831, -28.258874], // starting position [lng, lat]
-      zoom: 3 // starting zoom
-      });
-
-       map.resize()
-    </script>
-  </body>
 </html>
