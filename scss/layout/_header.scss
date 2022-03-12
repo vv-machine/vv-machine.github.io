@@ -1,5 +1,10 @@
 @use '../abstracts/' as *;
 
+		 .gradient {
+			fill:$dark;
+			transition-duration: all 1s;
+		}
+
 .header {
 		 // @include position(absolute, $top: 100px, $left: 5%);
 //			@extend %block;
@@ -12,13 +17,27 @@
 		min-width:340px;
 	}
 
+
 	&__logo {
 		width:270px;
 //		border:1px solid red;
 		@extend %center;
 //		@extend %block;
-@include animation(moveup 0.25s linear 0s 1 forwards);
+		@include animation(moveup 0.25s linear 0s 1 forwards);
 
+
+		&:hover .gradient, &:active .gradient {
+			fill:url(#gradient);
+			transition: all 1s;
+
+		}
+
+		&:hover {
+			-webkit-filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.3) );
+			filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.3) );
+			transition: all 1s;
+
+		}
 		@include small {
 			margin-top:130px;
 			margin-bottom:100px;

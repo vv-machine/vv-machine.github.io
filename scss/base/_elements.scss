@@ -63,6 +63,7 @@ body {
 			background: $dark;
 			@include offset($left: 0, $right: 0, $bottom: 0);
 			height: $borderwidth ;
+
 	}
 
 }
@@ -90,5 +91,10 @@ body {
 	@include large {
 		height:100vh;
 		overflow:hidden;
+	}
+
+	&:after{
+    display:none;
+    content: url(../bg_body.png);
 	}
 }

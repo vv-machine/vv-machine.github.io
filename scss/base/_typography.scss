@@ -40,10 +40,24 @@ h4 {
 
 
 a {
+	cursor: pointer;
+
 	color:$dark;
 	text-decoration: none;
 	font-weight:600;
+	&:active, &:focus, &:hover {
+	 outline: none;
+	 ie-dummy: expression(this.hideFocus=true);
+	 border:0;
+	}
 
+
+	& img, & img:hover {
+		outline: none;
+ 	 ie-dummy: expression(this.hideFocus=true);
+ 	 border:0;
+	 -moz-outline-style: none;
+	}
 }
 
 .nav--active .nav__link a {

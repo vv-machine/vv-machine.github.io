@@ -16,9 +16,9 @@ $(document).ready(function() {
   $(window).resize(function() {
         clearTimeout(resizeId);
         if ($(window).width() < 1200) {
-          resizeId = setTimeout(addHamburger, 500);
+          resizeId = setTimeout(addHamburger, 100);
         }
-        else if(($('.button--hamburger').length) && ($(window).width() > 1200) ) {
+        else if($('.button--hamburger').length) {
             $('.button--hamburger').remove();
             $(container).removeClass("noscroll");
             $(overlay).removeClass("nav--active");

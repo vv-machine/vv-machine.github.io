@@ -137,8 +137,18 @@
         margin:0 5px 20px;
 
       }
-    }
 
+      &--iframe {
+              	position:relative; top: 0; bottom: 0; width: 100%;
+              	display:block;
+              	height:0;
+                padding-bottom:65%;
+              		& canvas {
+              			width:100%!important;
+              			height:500px!important;
+              		}
+      }
+    }
 
     &__item {
               @extend %text-center;
@@ -216,6 +226,20 @@
 
               }
     }
+
+    &__list {
+      &--inline {
+        width:100%;
+        position:relative;
+        li{
+          position:relative;
+          display:inline-block;
+          margin:$space 0;
+          padding:$double-space;
+        }
+      }
+    }
+
     &__text {
               @extend %center;
               @extend %text-center;
@@ -234,6 +258,11 @@
         @include typeScale(2, 1.5);
         &:visited {
           color:white;
+        }
+        &:hover, &:active {
+          background: -webkit-linear-gradient( #008000 ,#ffa500, #ff0000,  #4b0082);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
         }
       }
 
