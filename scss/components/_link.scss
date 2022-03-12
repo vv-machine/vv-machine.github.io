@@ -1,0 +1,14 @@
+@use '../abstracts/' as *;
+
+
+a.link {
+  &--tag {
+    background-color: white;
+    color:black;
+    padding:$double-space;
+    font-weight: bold;
+    &:hover {
+      background: -webkit-linear-gradient( #008000 , #ffff00,#ffa500, #ff0000, #0000FF, #4b0082);
+    }
+  }
+}

@@ -1,26 +1,16 @@
 @use '../abstracts/' as *;
 
-#map
-{
-position:relative; top: 0; bottom: 0; width: 100%;
-display:block;
-height:500px;
-& canvas {
-	width:100%!important;
-	height:500px!important;
-}
+#info .black {
+	fill:black;
 }
 
 #aboriginalart {
 	background-color: transparent;
 }
 
-
 .nav {
-
 	@extend %text-center;
 	@extend %overflow-hidden;
-
 	@include animation(moveup 0.25s linear 0s 1 forwards);
 
 	&__content {
@@ -42,7 +32,9 @@ height:500px;
 			margin-left:10%;
 
 		}
-
+		@include small{
+			margin-top:50px;
+		}
 
 		@include x-large {
 			float:left;
@@ -50,6 +42,7 @@ height:500px;
 
 		}
 	}
+
 
 	&__link {
 		width:115px;
@@ -64,7 +57,7 @@ height:500px;
 			}
 			@include small {
 					margin-left:auto;
-					margin-top:$space;
+					margin-top:$double-space;
 
 			}
 
@@ -73,18 +66,31 @@ height:500px;
 					margin-top:0;
 
 			}
+
 	}
+
 
 	&__img{
 		width:auto;
 		margin: -30px auto -35px;
 		width:115px;
+		transition: all .3s ease;
+
 		@include large {
-			fill:$dark;
+		fill:$dark;
 			}
 		@include small {
 			fill:$light;
 			}
+
+
+		&:hover, &:active {
+			fill: url(#gradient);
+			-webkit-filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.3) );
+		  filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.3) );
+			transition: all .3s ease;
+
+		}
 
 
 	}
