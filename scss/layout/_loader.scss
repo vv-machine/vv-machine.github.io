@@ -1,0 +1,27 @@
+@use '../abstracts/' as *;
+
+.loader {
+	display: flex;
+  justify-content: center;
+  align-items: center;
+	@include position($position:fixed, $top:0, $left:0, $z-index:9999);
+  height: 100vh;
+  width: 100vw;
+  background:black;
+	vertical-align: middle;
+  text-align: center;
+  color: #fff;
+
+	&__counter {
+		opacity:0;
+		@include animation(fadein 0.5s linear 0s 1 forwards);
+		display:inline;
+		@extend %relative;
+		@include typeScale(4, 3);
+		border:2px solid white;
+		border-radius:50%;
+		width:50px;
+		height:50px;
+		font-weight: 600;
+	}
+}

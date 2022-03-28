@@ -72,8 +72,11 @@
 //			margin-bottom:0;
 //			margin-right:-2px;
 			margin:0 5px 0 0;
-			@include animation(moveup 0.5s linear 0s 1 forwards);
 
+	/*		&.animate {
+			@include animation(moveup 0.5s linear 0s 1 forwards);
+			}
+*/
 			h1 {
 				@include typeScale(6, 4);
 				font-weight:200;
@@ -115,8 +118,10 @@
 	//			margin-left:-2px;
 
 	margin:0 0 0 5px;
-
-	@include animation(moveup 1.0s forwards);
+	transition: all 1s;
+	&.move {
+		transform: translateY(5%);
+	}
 
 
 				h1 {

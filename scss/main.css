@@ -18,7 +18,7 @@ html:before, html:after, body:before, body:after, .lb__button {
   position: fixed;
 }
 
-.main-wrapper, .main__item, .main__link {
+.main-wrapper, .main__item, .main__link, .loader__counter {
   position: relative;
 }
 
@@ -109,7 +109,7 @@ h1, h2, .main__title, .main__link-text {
 */
 @-webkit-keyframes moveup {
   0% {
-    transform: translateY(10%);
+    transform: translateY(5%);
     opacity: 0;
   }
   20% {
@@ -121,7 +121,7 @@ h1, h2, .main__title, .main__link-text {
 }
 @-moz-keyframes moveup {
   0% {
-    transform: translateY(10%);
+    transform: translateY(5%);
     opacity: 0;
   }
   20% {
@@ -133,7 +133,7 @@ h1, h2, .main__title, .main__link-text {
 }
 @-ms-keyframes moveup {
   0% {
-    transform: translateY(10%);
+    transform: translateY(5%);
     opacity: 0;
   }
   20% {
@@ -145,7 +145,7 @@ h1, h2, .main__title, .main__link-text {
 }
 @-o-keyframes moveup {
   0% {
-    transform: translateY(10%);
+    transform: translateY(5%);
     opacity: 0;
   }
   20% {
@@ -157,7 +157,7 @@ h1, h2, .main__title, .main__link-text {
 }
 @keyframes moveup {
   0% {
-    transform: translateY(10%);
+    transform: translateY(5%);
     opacity: 0;
   }
   20% {
@@ -405,6 +405,36 @@ h1, h2, .main__title, .main__link-text {
 
 .lb__item--col-offset-15 {
   margin-left: 100%;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  height: 100vh;
+  width: 100vw;
+  background: black;
+  vertical-align: middle;
+  text-align: center;
+  color: #fff;
+}
+.loader__counter {
+  opacity: 0;
+  -webkit-animation: fadein 0.5s linear 0s 1 forwards;
+  -moz-animation: fadein 0.5s linear 0s 1 forwards;
+  animation: fadein 0.5s linear 0s 1 forwards;
+  display: inline;
+  font-size: 2.8561rem;
+  line-height: 3rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-weight: 600;
 }
 
 .gradient {
@@ -714,9 +744,10 @@ h1, h2, .main__title, .main__link-text {
 .main__list--left {
   margin-top: 0;
   margin: 0 5px 0 0;
-  -webkit-animation: moveup 0.5s linear 0s 1 forwards;
-  -moz-animation: moveup 0.5s linear 0s 1 forwards;
-  animation: moveup 0.5s linear 0s 1 forwards;
+  /*		&.animate {
+  			@include animation(moveup 0.5s linear 0s 1 forwards);
+  			}
+  */
 }
 .main__list--left h1 {
   font-size: 4.826809rem;
@@ -747,9 +778,10 @@ h1, h2, .main__title, .main__link-text {
 }
 .main__list--right {
   margin: 0 0 0 5px;
-  -webkit-animation: moveup 1s forwards;
-  -moz-animation: moveup 1s forwards;
-  animation: moveup 1s forwards;
+  transition: all 1s;
+}
+.main__list--right.move {
+  transform: translateY(5%);
 }
 .main__list--right h1 {
   font-weight: 200;

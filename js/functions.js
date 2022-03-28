@@ -1,3 +1,27 @@
+$(window).on('load', function () {
+
+  setTimeout(function(){
+    $("#loader").fadeOut(200);
+  }, 1000);
+
+
+});
+
+var seconds = -1;
+var el = document.getElementById('counter');
+
+function incrementSeconds() {
+    seconds += 1;
+    el.innerText = seconds ;
+
+  if ( seconds == 5 ) {
+    console.log('5');
+  }
+}
+
+var cancel = setInterval(incrementSeconds, 1000);
+
+
 $(document).ready(function() {
   var overlay = $('.nav'),
       container = $('body');
@@ -10,6 +34,14 @@ $(document).ready(function() {
     e.preventDefault();
     window.location.hash="";
   });
+
+  $('.main__list--left').hover(
+       function(){ $(this).addClass('move') },
+  );
+
+  $('.main__list--right').hover(
+       function(){ $(this).addClass('move') },
+  );
 
   var resizeId;
 
