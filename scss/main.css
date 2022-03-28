@@ -424,9 +424,9 @@ h1, h2, .main__title, .main__link-text {
 }
 .loader__counter {
   opacity: 0;
-  -webkit-animation: fadein 0.5s linear 0s 1 forwards;
-  -moz-animation: fadein 0.5s linear 0s 1 forwards;
-  animation: fadein 0.5s linear 0s 1 forwards;
+  -webkit-animation: fadein 0.15s linear 0s 1 forwards;
+  -moz-animation: fadein 0.15s linear 0s 1 forwards;
+  animation: fadein 0.15s linear 0s 1 forwards;
   display: inline;
   font-size: 2.8561rem;
   line-height: 3rem;
@@ -720,6 +720,7 @@ h1, h2, .main__title, .main__link-text {
   -webkit-text-stroke: 1.5px black;
   padding-bottom: 10px;
   color: black;
+  transition: all 1s;
 }
 .main__list {
   width: 47%;
@@ -744,10 +745,13 @@ h1, h2, .main__title, .main__link-text {
 .main__list--left {
   margin-top: 0;
   margin: 0 5px 0 0;
-  /*		&.animate {
-  			@include animation(moveup 0.5s linear 0s 1 forwards);
-  			}
-  */
+  margin: 0 0 0 5px;
+  transition: all 1s;
+}
+@media (min-width: 960px) {
+  .main__list--left.move .main__title {
+    margin-top: 160px;
+  }
 }
 .main__list--left h1 {
   font-size: 4.826809rem;
@@ -780,8 +784,10 @@ h1, h2, .main__title, .main__link-text {
   margin: 0 0 0 5px;
   transition: all 1s;
 }
-.main__list--right.move {
-  transform: translateY(5%);
+@media (min-width: 960px) {
+  .main__list--right.move .main__title {
+    margin-top: 245px;
+  }
 }
 .main__list--right h1 {
   font-weight: 200;

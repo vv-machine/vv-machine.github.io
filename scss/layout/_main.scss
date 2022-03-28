@@ -4,7 +4,6 @@
 	@extend %center;
 	@extend %text-center;
 	@extend %no-scrollbar;
-
 	height: 100%;
 	overflow: auto;
 	scrollbar-width: none; /* Firefox */
@@ -24,7 +23,7 @@
 			order:2;
 			flex:1;
 			justify-content: center;
-//					max-width: 95%;
+//			max-width: 95%;
 //			height:100vh;
     }
 
@@ -41,6 +40,7 @@
 		-webkit-text-stroke: 1.5px black;
 		padding-bottom:$space;
 		color:$dark;
+		transition: all 1s;
 
 	}
 
@@ -73,10 +73,17 @@
 //			margin-right:-2px;
 			margin:0 5px 0 0;
 
-	/*		&.animate {
-			@include animation(moveup 0.5s linear 0s 1 forwards);
+			margin:0 0 0 5px;
+			transition: all 1s;
+
+			@include medium {
+				&.move .main__title{
+
+					margin-top:160px;
+
+				}
 			}
-*/
+
 			h1 {
 				@include typeScale(6, 4);
 				font-weight:200;
@@ -119,10 +126,11 @@
 
 	margin:0 0 0 5px;
 	transition: all 1s;
-	&.move {
-		transform: translateY(5%);
+	@include medium {
+		&.move .main__title {
+			margin-top:245px;
+		}
 	}
-
 
 				h1 {
 			//		@include typeScale(3, 3);
