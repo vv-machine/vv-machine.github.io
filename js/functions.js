@@ -1,9 +1,5 @@
 $(window).on('load', function () {
-
-  setTimeout(function(){
     $("#loader").fadeOut(200);
-  }, 1000);
-
 
 });
 
@@ -29,6 +25,13 @@ $(document).ready(function() {
   if ($(window).width() < 1200) {
    addHamburger();
   }
+
+  $(document).bind('keydown', function(e) {
+      if (e.which == 27) {
+        e.preventDefault();
+        window.location.hash="";
+      }
+  });
 
   $('.lb__button').click(function(e) {
     e.preventDefault();
