@@ -41,44 +41,6 @@ $(document).ready(function() {
     map.resize()
   }
 
-  function loadLottie() {
-            $('#hattifattinerContainer').html('<lottie-player class="lazyload" src="img/seam_hattifattiner.json" speed="1" style="width: 100%; height: auto" loop autoplay class="lazyload"></lottie-player>');
-  }
-
-  function loadCodepen() {
-            $('#codepenContainer').html('<iframe class="lb__img" height="550" style="width: 105%; margin-left:-2.5%" scrolling="no" title="CSS Flipbook animation with candlelight" src="https://codepen.io/vv-machine/embed/LYzGdmP?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"> See the Pen <a href="https://codepen.io/vv-machine/pen/LYzGdmP">');
-  }
-
-  function loadVimeo() {
-    $('#gourmetgoonsContainer').html('<iframe src="https://player.vimeo.com/video/104087126?h=117115109f" width="750px" height="400px" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" class="lazyload" allowfullscreen></iframe>');
-  }
-
-  $('#storymapsLink').click(loadMap);
-
-  $('#seamLink').click(loadLottie);
-
-  $('#storybookLink').click(loadLottie);
-
-  $('#gourmetgoonsLink').click(loadVimeo);
-
-
-  if (window.location.href.indexOf("#storymaps") > -1) {
-    loadMap();
-  }
-
-  if (window.location.href.indexOf("#seam") > -1) {
-    loadLottie();
-  }
-
-  if (window.location.href.indexOf("#storybook") > -1) {
-    loadCodepen();
-  }
-
-
-    if (window.location.href.indexOf("#gourmetgoons") > -1) {
-      loadVimeo();
-    }
-
   function goBack() {
     window.location.hash="";
   }
@@ -142,5 +104,45 @@ $(document).ready(function() {
     $('.mapboxgl-canvas').on('idle',function(){
     $('.mapboxgl-canvas').resize()
   })
+
+
+    function loadLottie() {
+      $('#hattifattinerContainer').html('<lottie-player class="lazyload" src="img/seam_hattifattiner.json" speed="1" style="width: 100%; height: auto" loop autoplay class="lazyload"></lottie-player>');
+    }
+
+    function loadCodepen() {
+      $('#codepenContainer').html('<iframe class="lb__img" height="550" style="width: 105%; margin-left:-2.5%" scrolling="no" title="CSS Flipbook animation with candlelight" src="https://codepen.io/vv-machine/embed/LYzGdmP?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"> See the Pen <a href="https://codepen.io/vv-machine/pen/LYzGdmP">');
+    }
+
+    function loadVimeo() {
+      $('#gourmetgoonsContainer').html('<iframe src="https://player.vimeo.com/video/104087126?h=117115109f" width="750px" height="400px" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" class="lazyload" allowfullscreen></iframe>');
+    }
+
+    $('#storymapsLink').click(loadMap);
+
+    $('#seamLink').click(loadLottie);
+
+    $('#storybookLink').click(loadCodepen);
+
+    $('#gourmetgoonsLink').click(loadVimeo);
+
+
+    if (window.location.href.indexOf("#storymaps") > -1) {
+      loadMap();
+    }
+
+    if (window.location.href.indexOf("#seam") > -1) {
+      loadLottie();
+    }
+
+    if (window.location.href.indexOf("#storybook") > -1) {
+      loadCodepen();
+    }
+
+
+      if (window.location.href.indexOf("#gourmetgoons") > -1) {
+        loadVimeo();
+      }
+
 
 });

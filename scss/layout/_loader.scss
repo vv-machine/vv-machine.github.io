@@ -13,8 +13,6 @@
   color: #fff;
 
 	&__counter {
-		opacity:0;
-		@include animation(fadein 0.15s linear 0s 1 forwards);
 		display:inline;
 		@extend %relative;
 		@include typeScale(4, 3);
