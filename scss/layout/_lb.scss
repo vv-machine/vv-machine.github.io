@@ -1,15 +1,6 @@
 @use '../abstracts/' as *;
 
 .lb {
-//  @extend %darkcolors;
-//  @extend %padding;
-//  @extend %fixed;
-//  @extend %full-height;
-//  @include offset($top: 0, $left:0, $z-index:200);
-/*  &:target {
-    display:block;
-    @include animation(fadein 0.5s linear 0s 1 forwards);
-  }*/
   @include overlay($background-color: $dark, $color:white, $left: 0, $top:0, $z-index: 500);
   @extend %no-space;
   @extend %no-scrollbar;
@@ -256,13 +247,23 @@
         padding:$space;
         text-decoration: none;
         @include typeScale(2, 1.5);
+        transition: 0.3s;
+
+        &:after {
+          @extend %pseudo;
+          content:"\2715";
+          @extend %block;
+          @include position($position:absolute, $top:10px, $left:0, $z-index: -10);
+          background: -webkit-linear-gradient( #008000 ,#ffa500, #ff0000,  #4b0082);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+
+        }
         &:visited {
           color:white;
         }
         &:hover, &:active {
-          background: -webkit-linear-gradient( #008000 ,#ffa500, #ff0000,  #4b0082);
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
+          color:transparent;
         }
       }
 

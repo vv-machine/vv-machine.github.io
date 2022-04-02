@@ -1,7 +1,8 @@
 <!-- SVG Sprite -->
 <svg width="0" height="0" class="hidden">
 
-<symbol version="1.1" id="dribbble"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" xml:space="preserve" viewBox="0 0 143.6 70.4">
+<symbol version="1.1" id="dribbble" class="symbol" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" xml:space="preserve" viewBox="0 0 143.6 70.4">
+
 
 <g id="dribbble" class="shape">
   <path d="M102.2,17.5c-3.1-5.4-7.4-9.7-12.8-12.8S78.2,0,71.8,0S59.5,1.6,54.2,4.7c-5.4,3.1-9.7,7.4-12.8,12.8

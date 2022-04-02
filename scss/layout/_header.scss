@@ -1,10 +1,5 @@
 @use '../abstracts/' as *;
 
-		 .gradient {
-			fill:$dark;
-			transition-duration: all 1s;
-		}
-
 .header {
 		 // @include position(absolute, $top: 100px, $left: 5%);
 //			@extend %block;
@@ -23,13 +18,19 @@
 //		border:1px solid red;
 		@extend %center;
 //		@extend %block;
-		@include animation(moveup 0.25s linear 0s 1 forwards);
+//		@include animation(moveup 0.25s linear 0s 1 forwards);
 
+		& .gradient {
+			fill:$dark;
+		}
+		& .gradient {
+			opacity:0;
+			fill:url(#gradient);
+				transition: all .3s ease;
+		}
 
 		&:hover .gradient, &:active .gradient {
-			fill:url(#gradient);
-			transition: all 1s;
-
+			opacity:1;
 		}
 
 		&:hover {
