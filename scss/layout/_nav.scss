@@ -11,7 +11,7 @@
 .nav {
 	@extend %text-center;
 	@extend %overflow-hidden;
-	@include animation(moveup 0.25s linear 0s 1 forwards);
+//	@include animation(moveup 0.25s linear 0s 1 forwards);
 
 	&__content {
 	//	margin:0 auto;
