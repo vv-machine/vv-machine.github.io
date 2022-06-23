@@ -1,5 +1,11 @@
 @use '../abstracts/' as *;
+.loaded .main__list--left {
+	@include animation(moveup 1s ease-in-out 0s 1 forwards);
+}
 
+.loaded .main__list--right {
+	@include animation(moveup 1s ease-in-out 0.5s 1 forwards);
+}
 .main {
 	@extend %center;
 	@extend %text-center;
@@ -53,7 +59,6 @@
 			overflow: auto;
 			scrollbar-width: none; /* Firefox */
 			-ms-overflow-style: none;  /* Internet Explorer 10+ */
-
 			&::-webkit-scrollbar { /* WebKit */
     		width: 0;
     		height: 0;
@@ -76,10 +81,13 @@
 			margin:0 0 0 5px;
 			transition: all 1s;
 
+			transform:translateY(5%);
+
+
 			@include medium {
 				&.move .main__title{
 
-					margin-top:170px;
+					margin-top:165px;
 
 				}
 			}
@@ -123,12 +131,13 @@
 //	padding-bottom:100px;
 		//		margin-bottom: 10%;
 	//			margin-left:-2px;
+	transform:translateY(5%);
 
 	margin:0 0 0 5px;
 	transition: all 1s;
 	@include medium {
 		&.move .main__title {
-			margin-top:245px;
+			margin-top:240px;
 		}
 	}
 

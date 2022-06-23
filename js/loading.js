@@ -1,7 +1,6 @@
 $(window).on('load', function () {
 
-    $("#loader").fadeOut(100);
-
+  $("#loader").fadeOut(100);
 });
 
 var seconds = -1;
