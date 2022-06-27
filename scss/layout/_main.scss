@@ -3,6 +3,11 @@
 	@include animation(moveup 1s ease-in-out 0s 1 forwards);
 
 }
+
+.loaded .main__list--right {
+	@include animation(moveup 1s ease-in-out 0.5s 1 forwards);
+
+}
 .main {
 	@extend %center;
 	@extend %text-center;
@@ -78,13 +83,13 @@
 			margin:0 0 0 5px;
 			transition: all 1s;
 
-			transform:translateY(7%);
+			transform:translateY(5%);
 
 
 			@include medium {
 				&.move .main__title{
 
-					margin-top:165px;
+					margin-top:135px;
 
 				}
 			}
@@ -128,12 +133,12 @@
 //	padding-bottom:100px;
 		//		margin-bottom: 10%;
 	//			margin-left:-2px;
-
+transform:translateY(5%);
 	margin:0 0 0 5px;
 	transition: all 1s;
 	@include medium {
 		&.move .main__title {
-			margin-top:240px;
+			margin-top:210px;
 		}
 	}
 
