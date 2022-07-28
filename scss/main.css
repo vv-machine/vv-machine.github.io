@@ -411,6 +411,7 @@ a.link--tag, a.link--tag:before, .lb__item strong, .lb__button:after, .main__ite
   width: 50px;
   height: 50px;
   font-weight: 600;
+  font-family: "Bookman";
 }
 
 .header {

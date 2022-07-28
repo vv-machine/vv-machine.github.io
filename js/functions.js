@@ -57,9 +57,14 @@ $(document).ready(function() {
   function move() {
     $(this).addClass('move')
   }
-  $('.main__list--left').hover(move);
 
-  $('.main__list--right').hover(move);
+  if($(window).width() >= 960) {
+    $('.main__list--left').hover(move);
+
+    $('.main__list--right').hover(move);
+
+  }
+
 
   var resizeId;
 
