@@ -725,9 +725,9 @@ a.link--tag, a.link--tag:before, .lb__item strong, .lb__button:after, .main__ite
 }
 @media (max-width: 960px) {
   .main__list {
-    width: 70%;
+    width: 75%;
     height: auto;
-    overflow: hidden;
+    overflow-x: hidden;
   }
 }
 .main__list--left {
