@@ -36,13 +36,14 @@
 
 $columns: 15;
 
+
 @for $i from 1 through $columns {
  .lb__item--col-#{$i} {
-   flex: 0 0 100% / $columns * $i;
+   flex: 0 0 calc(100% / $columns * $i);
 
  }
  .lb__item--col-offset-#{$i} {
-   margin-left: 100% / $columns * $i;
+   margin-left: calc(100% / $columns * $i);
 
  }
 }

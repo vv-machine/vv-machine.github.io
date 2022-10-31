@@ -727,6 +727,7 @@ a.link--tag, a.link--tag:before, .lb__item strong, .lb__button:after, .main__ite
   .main__list {
     width: 70%;
     height: auto;
+    overflow: hidden;
   }
 }
 .main__list--left {

@@ -68,7 +68,9 @@
 
 			@include small {
 				width:70%;
-				height:auto
+				height:auto;
+				overflow:hidden;
+
 			}
 
 	}
