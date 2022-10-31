@@ -411,6 +411,7 @@ a.link--tag, a.link--tag:before, .lb__item strong, .lb__button:after, .main__ite
   width: 50px;
   height: 50px;
   font-weight: 600;
+  font-family: "arial";
 }
 
 .header {
@@ -663,6 +664,12 @@ a.link--tag, a.link--tag:before, .lb__item strong, .lb__button:after, .main__ite
   animation: moveup 1s ease-in-out 0s 1 forwards;
 }
 
+.loaded .main__list--right {
+  -webkit-animation: moveup 1s ease-in-out 0.5s 1 forwards;
+  -moz-animation: moveup 1s ease-in-out 0.5s 1 forwards;
+  animation: moveup 1s ease-in-out 0.5s 1 forwards;
+}
+
 .main {
   height: 100%;
   overflow: auto;
@@ -718,8 +725,9 @@ a.link--tag, a.link--tag:before, .lb__item strong, .lb__button:after, .main__ite
 }
 @media (max-width: 960px) {
   .main__list {
-    width: 70%;
+    width: 75%;
     height: auto;
+    overflow-y: hidden;
   }
 }
 .main__list--left {
@@ -727,11 +735,11 @@ a.link--tag, a.link--tag:before, .lb__item strong, .lb__button:after, .main__ite
   margin: 0 5px 0 0;
   margin: 0 0 0 5px;
   transition: all 1s;
-  transform: translateY(7%);
+  transform: translateY(5%);
 }
 @media (min-width: 960px) {
   .main__list--left.move .main__title {
-    margin-top: 165px;
+    margin-top: 135px;
   }
 }
 .main__list--left h1 {
@@ -762,12 +770,13 @@ a.link--tag, a.link--tag:before, .lb__item strong, .lb__button:after, .main__ite
   margin-bottom: 10px;
 }
 .main__list--right {
+  transform: translateY(5%);
   margin: 0 0 0 5px;
   transition: all 1s;
 }
 @media (min-width: 960px) {
   .main__list--right.move .main__title {
-    margin-top: 240px;
+    margin-top: 210px;
   }
 }
 .main__list--right h1 {
