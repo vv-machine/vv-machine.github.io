@@ -8,7 +8,7 @@ var el = document.getElementById('counter');
 
 function incrementSeconds() {
     seconds += 1;
-    el.innerText = seconds ;
+    document.getElementById('counter').innerText = seconds ;
 
   if ( seconds == 5 ) {
     console.log('5');

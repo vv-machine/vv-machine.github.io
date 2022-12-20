@@ -1,13 +1,12 @@
 @use '../abstracts/' as *;
 .loaded .main__list--left {
 	@include animation(moveup 1s ease-in-out 0s 1 forwards);
-
 }
 
 .loaded .main__list--right {
 	@include animation(moveup 1s ease-in-out 0.5s 1 forwards);
-
 }
+
 .main {
 	@extend %center;
 	@extend %text-center;
@@ -80,18 +79,17 @@
 			margin-top:0;
 //			margin-bottom:0;
 //			margin-right:-2px;
-			margin:0 5px 0 0;
 
 			margin:0 0 0 5px;
 			transition: all 1s;
 
-			transform:translateY(5%);
+		//	transform:translateY(5%);
 
 
 			@include medium {
 				&.move .main__title{
 
-					margin-top:135px;
+					margin-top:155px;
 
 				}
 			}
@@ -101,7 +99,7 @@
 				font-weight:200;
 				@include medium {
 					font-weight: 100;
-					margin-top:155px;
+					margin-top:170px;
 			//		@include typeScale(5, 4);
 				}
 
@@ -140,7 +138,7 @@
 	transition: all 1s;
 	@include medium {
 		&.move .main__title {
-			margin-top:210px;
+			margin-top:225px;
 		}
 	}
 
@@ -153,7 +151,7 @@
 					}
 
 					@include medium {
-						margin-top:225px;
+						margin-top:235px;
 					}
 
 					@include small {

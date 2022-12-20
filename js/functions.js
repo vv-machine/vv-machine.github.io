@@ -33,7 +33,6 @@ $(document).ready(function() {
   }
 
 
-
 // HAMBURGER STUFF
 
   if ($(window).width() < 1200) {
@@ -147,6 +146,6 @@ $(document).ready(function() {
     sourceLottie.src = "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js";
     $("head").append(sourceLottie);
 
-Z
+
 
 });

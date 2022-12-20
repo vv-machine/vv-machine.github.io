@@ -11,16 +11,17 @@
 	vertical-align: middle;
   text-align: center;
   color: #fff;
+	display:block;
 
 	&__counter {
-		display:inline;
-		@extend %relative;
-		@include typeScale(4, 3);
+		display:block;
+		@include position($position:fixed, $top:50%, $left:50%, );
+		@include typeScale(3, 2);
 		border:2px solid white;
 		border-radius:50%;
 		width:55px;
-		height:50px;
-		padding-top:5px;
+		height:43px;
+		padding-top:12px;
 		font-weight: 500;
 		font-family:"Arial";
 		vertical-align: middle;
