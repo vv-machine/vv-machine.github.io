@@ -13,7 +13,7 @@ $(document).ready(function() {
               source.type = "text/javascript";
               source.src = "https://www.googletagmanager.com/gtag/js?id=G-QJP6QQEXFE";
               $("head").append(source);
-
+              localStorage.ClassName = "lb--close";
               $("#googleConsent").addClass('lb--close')
               ev.preventDefault();
           }
@@ -27,28 +27,28 @@ $(document).ready(function() {
               source.type = "text/javascript";
               source.src = "https://www.googletagmanager.com/gtag/js?id=G-QJP6QQEXFE";
               $("head").append(source);
-
+              localStorage.ClassName = "lb--close";
               $("#googleConsent").addClass('lb--close')
               ev.preventDefault();
 
          }
 
-  // touchstart handler
           button2.addEventListener("touchStart", onlyTouch, false);
    
           function onlyTouch(ev) {
               $("#googleConsent").addClass('lb--close');
-                  localStorage.ClassName = "lb--close";
+              localStorage.ClassName = "lb--close";
               ev.preventDefault();
           }
    
           button2.addEventListener("click", onlyClick, false);   
           function onlyClick(ev) {
               $("#googleConsent").addClass('lb--close');
-                  localStorage.ClassName = "lb--close";
+              localStorage.ClassName = "lb--close";
               ev.preventDefault();
           }
-    SetClass();
+
+          SetClass();
 });
 
 function SetClass() {
