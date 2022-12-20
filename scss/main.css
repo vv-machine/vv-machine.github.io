@@ -1143,10 +1143,14 @@ a.link--tag, a.link--tag:before, .lb__item strong, .lb__button:after, .main__ite
 }
 @media (max-width: 960px) {
   .googleconsent {
-    height: 100px;
+    height: 120px;
     position: fixed;
     top: 0;
     left: 0;
+    margin-top: 0px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0px;
   }
 }
 .googleconsent--close {
@@ -1159,17 +1163,27 @@ a.link--tag, a.link--tag:before, .lb__item strong, .lb__button:after, .main__ite
   margin-bottom: -15px;
   text-align: right;
 }
+@media (max-width: 960px) {
+  .googleconsent .img {
+    margin-bottom: 0px;
+    text-align: center;
+    margin-left: 35px;
+  }
+}
 .googleconsent p {
   width: auto;
   margin-right: 25px;
 }
+@media (max-width: 960px) {
+  .googleconsent p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    margin-bottom: 3px;
+  }
+}
 .googleconsent .img .active {
   fill: white;
-}
-.googleconsent .lb__button:after {
-  content: "";
-  width: 100%;
-  height: 100%;
 }
 .googleconsent .button {
   padding: 10px;
@@ -1187,11 +1201,21 @@ a.link--tag, a.link--tag:before, .lb__item strong, .lb__button:after, .main__ite
   height: 30px;
   transition: 1s forwards;
 }
+@media (max-width: 960px) {
+  .googleconsent .button {
+    margin-left: 0px;
+  }
+}
 .googleconsent .button:visited {
   color: white;
 }
 .googleconsent .button:first-of-type {
   background: linear-gradient(217deg, #008000, #ffa500 70.71%);
+}
+@media (max-width: 960px) {
+  .googleconsent .button:first-of-type {
+    margin-right: 5%;
+  }
 }
 .googleconsent .button:first-of-type:hover, .googleconsent .button:first-of-type:active {
   background: #008000;
@@ -1203,6 +1227,11 @@ a.link--tag, a.link--tag:before, .lb__item strong, .lb__button:after, .main__ite
 .googleconsent .button:nth-of-type(2):hover, .googleconsent .button:nth-of-type(2):active {
   background: #ff0000;
   color: black;
+}
+@media (max-width: 960px) {
+  .googleconsent .button:nth-of-type(2) {
+    margin-left: 5%;
+  }
 }
 .googleconsent .button:hover, .googleconsent .button:active {
   color: white;
