@@ -145,4 +145,7 @@ $(document).ready(function() {
     sourceLottie.type = "text/javascript";
     sourceLottie.src = "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js";
     $("head").append(sourceLottie);
+
+
+
 });

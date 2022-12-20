@@ -6,6 +6,12 @@
   background: black;
   width:100%;
   height:55px;
+  @include small {
+    height:100px;
+    position:fixed;
+    top:0;
+    left:0;
+  }
 //  @include offset($top:auto,$bottom: $space, $left:7vw, $z-index:550);
   @extend %padding;
   display:block;
