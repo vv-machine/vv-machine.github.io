@@ -1,12 +1,61 @@
-
 $(document).ready(function() {
+
 
 
   var overlay = $('.nav'),
       container = $('body');
 
+  // HAMBURGER STUFF
 
-  // CLOSE LB BUTTON
+  if ($(window).width() < 1200) {
+   addHamburger();
+  }
+
+  function addHamburger(){
+        if( !$('.button--hamburger').length )  {
+          $(overlay).after('<button class="button button--hamburger"><span></span></button>');
+          $(overlay).addClass("nav--hide");
+  }
+
+
+  var hamburger = document.querySelector(".button--hamburger");
+         
+         
+          // touchstart handler
+          hamburger.addEventListener("touchStart", onlyTouch, false);
+   
+          function onlyTouch(ev) {
+              toggleActive();
+              ev.preventDefault();
+          }
+   
+          // click event handler
+          hamburger.addEventListener("click", onlyClick, false);
+   
+          function onlyClick(ev) {
+            toggleActive();
+            ev.preventDefault();
+
+          }
+
+
+
+  // MAP
+
+  function loadMap() {
+    const map = new mapboxgl.Map({
+      container: 'map', // container ID
+      style: 'mapbox://styles/vv-machine/ckuz38e300g1t14mticq9ttp4?optimize=true', // style URL
+      center: [134.149831, -28.258874], // starting position [lng, lat]
+      zoom: 2 // starting zoom
+
+    });
+
+    map.resize()
+  }
+
+  // CLOSING BUTTON
+
   function goBack() {
     window.location.hash="";
   }
@@ -19,7 +68,7 @@ $(document).ready(function() {
 
   $('.lb__button').click(goBack);
 
-  // MAIN LISTS STUFF
+  // LIST STUFF
 
   function move() {
     $(this).addClass('move')
@@ -32,13 +81,7 @@ $(document).ready(function() {
 
   }
 
-
-
-// HAMBURGER STUFF
-
-  if ($(window).width() < 1200) {
-     addHamburger();
-  }
+  // NAV / INFO STUFF
 
   var resizeId;
 
@@ -54,18 +97,6 @@ $(document).ready(function() {
         }
     });
 
-    function addHamburger(){
-      if( !$('.button--hamburger').length )  {
-        $(overlay).after('<button class="button button--hamburger"><span></span></button>');
-        $(overlay).addClass("nav--hide");
-    }
-
-
-    $('.button--hamburger').click(function(e) {
-           e.preventDefault(e);
-           toggleActive();
-    });
-
 
     $('.nav__link--info').click(function(e) {
       setTimeout(toggleActive,500);
@@ -79,30 +110,10 @@ $(document).ready(function() {
       $('.button--hamburger').toggleClass("close");
     }
 
-
-}
-
-  // MAP BOX STUFF
-
-  function loadMap() {
-    const map = new mapboxgl.Map({
-      container: 'map', // container ID
-      style: 'mapbox://styles/vv-machine/ckuz38e300g1t14mticq9ttp4?optimize=true', // style URL
-      center: [134.149831, -28.258874], // starting position [lng, lat]
-      zoom: 2 // starting zoom
-
-    });
-
-    map.resize()
   }
 
 
-    $('.mapboxgl-canvas').on('idle',function(){
-    $('.mapboxgl-canvas').resize()
-  })
-
-  //LOADING STUFF
-
+// LOADING STUFF
     function loadLottie() {
       $('#hattifattinerContainer').html('<lottie-player class="lazyload" src="img/seam_hattifattiner.json" speed="1" style="width: 100%; height: auto" loop autoplay class="lazyload"></lottie-player>');
     }
@@ -140,13 +151,6 @@ $(document).ready(function() {
       if (window.location.href.indexOf("#gourmetgoons") > -1) {
         loadVimeo();
       }
-
-
-
-    var sourceLottie = document.createElement("script");
-    sourceLottie.type = "text/javascript";
-    sourceLottie.src = "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js";
-    $("head").append(sourceMap);
 
 
 });

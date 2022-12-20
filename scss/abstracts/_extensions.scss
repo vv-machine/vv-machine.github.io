@@ -78,6 +78,9 @@
 %block {
   display:block;
 }
+%inline {
+  display:inline-block;
+}
 
 %border-top {
 	border-top:$borderwidth  solid $dark;
