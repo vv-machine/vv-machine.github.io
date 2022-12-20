@@ -31,7 +31,7 @@ $(document).ready(function() {
               $("#googleConsent").addClass('lb--close')
               ev.preventDefault();
 
-          }
+         }
 
   // touchstart handler
           button2.addEventListener("touchStart", onlyTouch, false);

@@ -136,17 +136,16 @@ $(document).ready(function() {
       loadCodepen();
     }
 
-
-      if (window.location.href.indexOf("#gourmetgoons") > -1) {
+    if (window.location.href.indexOf("#gourmetgoons") > -1) {
         loadVimeo();
-      }
+    }
 
 
 
     var sourceLottie = document.createElement("script");
     sourceLottie.type = "text/javascript";
     sourceLottie.src = "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js";
-    $("head").append(sourceMap);
+    $("head").append(sourceLottie);
 
 
 });
