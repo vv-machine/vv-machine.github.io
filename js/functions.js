@@ -17,7 +17,7 @@ $(document).ready(function() {
       }
   });
 
-  $('.lb__button').click(goBack);
+  $('.lbClose').click(goBack);
 
   // MAIN LISTS STUFF
 
@@ -147,5 +147,6 @@ $(document).ready(function() {
     sourceLottie.src = "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js";
     $("head").append(sourceLottie);
 
+Z
 
 });
