@@ -4,11 +4,13 @@ $(document).ready(function() {
 
   var overlay = $('.nav'),
       container = $('body');
+      googleconsent = $('.googleconsent');
 
 
   // CLOSE LB BUTTON
   function goBack() {
-    window.location.hash="";
+    window.location.hash="/";
+    $(googleconsent).removeClass(".googleconsent--narrow");
   }
 
   $(document).bind('keydown', function(e) {

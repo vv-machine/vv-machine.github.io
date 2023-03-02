@@ -2,10 +2,10 @@
 
 
 .googleconsent {
-  position:relative;
+  position:fixed;
   background: black;
   width:100%;
-  height:55px;
+  height:40px;
   @include small {
     height:120px;
     position:fixed;
@@ -22,8 +22,7 @@
   font-size:1em;
   text-align: center;
   @include offset($top:0, $left:0, $z-index:550);
-
-  margin-top:-8px;
+  margin-top:-10px;
 
   &--close {
     display:none;
@@ -32,8 +31,8 @@
     width: 88px;
     @extend %inline;
     height:33px;
-    margin-top:20px;
-    margin-bottom:-15px;
+    margin-top:15px;
+    margin-bottom:-18px;
     text-align: right;
     @include small {
       margin-bottom:0px;
