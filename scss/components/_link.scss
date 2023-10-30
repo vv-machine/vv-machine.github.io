@@ -2,6 +2,7 @@
 
 
 a.link {
+  
   &--tag {
     @extend %block;
     background-color: white;
@@ -12,7 +13,7 @@ a.link {
     transition: 0.3s;
     &:before {
     //    background: linear-gradient( #008000 , #ffa500, #ff0000, #0000FF);
-  background: linear-gradient(17deg, rgba(0,255,106,1) 0%, rgba(255,0,0,1) 44%, rgba(254,255,0,1) 90%); 
+  background: linear-gradient(17deg, rgba(0,255,106,1) 0%, rgba(255,0,0,1) 44%, rgba(254,255,0,1) 90%);
         @extend %pseudo;
         @extend %block;
         width:0;
