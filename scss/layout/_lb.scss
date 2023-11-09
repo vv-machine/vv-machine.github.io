@@ -141,6 +141,7 @@
     }
 
     &__item {
+              @extend %no-space;
               @extend %text-center;
 
               & h1 {
@@ -190,6 +191,10 @@
 
               }
 
+              &--white {
+                background-color: white;
+              }
+
               &--text-left {
                 text-align:left;
               }
@@ -211,6 +216,12 @@
 
               }
 
+              &--spacehorisontal {
+                margin-left:5px;
+                margin-right:5px;
+
+              }
+
               & lottie-player {
                 margin:$space auto;
 
@@ -225,9 +236,10 @@
           position:relative;
           display:inline-block;
           margin:$space 0;
-          padding:$double-space;
+          padding:0 $double-space;
         }
       }
+      margin-bottom: $space;
     }
 
     &__text {

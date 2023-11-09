@@ -46,4 +46,14 @@ $columns: 15;
    margin-left: calc(100% / $columns * $i);
 
  }
+
+ .lb__item--marginleft-#{$i} {
+   flex: calc(100% / $columns * $i - $space);
+   margin-left:$space;
+ }
+
+ .lb__item--marginright-#{$i} {
+   flex: calc(100% / $columns * $i - $space);
+   margin-right:$space;
+ }
 }
