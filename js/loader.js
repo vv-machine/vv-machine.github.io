@@ -13,6 +13,8 @@ function incrementSeconds() {
   if ( seconds == 5 ) {
     console.log('5');
   }
+
+  
 }
 
 var cancel = setInterval(incrementSeconds, 1000);

@@ -104,9 +104,15 @@ $(document).ready(function() {
 
   //LOADING STUFF
 
-    function loadLottie() {
+    function loadSeam() {
+      $('head').append('<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet" />');
       $('#hattifattinerContainer').html('<lottie-player class="lazyload" src="img/seam_hattifattiner.json" speed="1" style="width: 100%; height: auto" loop autoplay class="lazyload"></lottie-player>');
     }
+
+    function loadJaadoodesign() {
+      $('head').append('<link href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet">');
+    }
+
 
     function loadCodepen() {
       $('#codepenContainer').html('<iframe class="lb__img" height="550" style="width: 105%; margin-left:-2.5%" scrolling="no" title="CSS Flipbook animation with candlelight" src="https://codepen.io/vv-machine/embed/LYzGdmP?default-tab=result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true"> See the Pen <a href="https://codepen.io/vv-machine/pen/LYzGdmP">');
@@ -118,11 +124,13 @@ $(document).ready(function() {
 
     $('#storymapsLink').click(loadMap);
 
-    $('#seamLink').click(loadLottie);
+    $('#seamLink').click(loadSeam);
 
     $('#storybookLink').click(loadCodepen);
 
     $('#gourmetgoonsLink').click(loadVimeo);
+
+    $('#jaadoodesignLink').click(loadJaadoodesign);
 
 
     if (window.location.href.indexOf("#storymaps") > -1) {
@@ -130,7 +138,7 @@ $(document).ready(function() {
     }
 
     if (window.location.href.indexOf("#seam") > -1) {
-      loadLottie();
+      loadSeam();
     }
 
     if (window.location.href.indexOf("#storybook") > -1) {
@@ -139,6 +147,10 @@ $(document).ready(function() {
 
     if (window.location.href.indexOf("#gourmetgoons") > -1) {
         loadVimeo();
+    }
+
+    if (window.location.href.indexOf("#jaadoodesign") > -1) {
+        loadJaadoodesign();
     }
 
 

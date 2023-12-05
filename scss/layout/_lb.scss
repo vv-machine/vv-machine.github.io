@@ -31,7 +31,73 @@
 
     }
 
-    &__colours {
+    &__colours-jaadoo {
+      display:inline-block;
+      width:35px;
+      height:35px;
+      margin-right:$space;
+      margin-bottom: $space;
+
+      &:first-of-type {
+        background-color: #a9963e;
+      }
+
+      &:nth-of-type(2) {
+        background-color: #161511;
+
+      }
+
+      &:nth-of-type(3) {
+        background-color: #e8e8e7;
+
+      }
+
+
+      &:nth-of-type(4) {
+        background-color: #bd3d68;
+
+      }
+
+      &:nth-of-type(5) {
+      }
+
+/*      &:nth-of-type(6) {
+        background-color: #E0DAEB;
+
+      }
+      &:nth-of-type(7) {
+        background-color: #819629;
+
+      }
+
+*/
+      &:nth-of-type(7) {
+          width:20%;
+          height:36%;
+          background:linear-gradient( #e0d9ba, #d1bc94);
+
+      }
+      &:nth-of-type(8) {
+        width:20%;
+          height:36%;
+          background:linear-gradient( #F9E0D6, #F18C90, #BD3D68 );
+
+      }
+      &:nth-of-type(9) {
+        width:20%;
+          height:36%;
+          background:linear-gradient( #ffe861, #ff5e00 );
+
+      }
+      &:nth-of-type(10) {
+        width:20%;
+          height:36%;
+          background:linear-gradient( #e8e6e8, #dad4e2 );
+
+      }
+    }
+
+    &__colours-seam {
       display:inline-block;
       width:35px;
       height:35px;
@@ -91,6 +157,10 @@
           width:94%;
           height:36%;
           background:radial-gradient(214.07% 217.99% at 32.29% -48%, #404040 0%, #202020 67.43%, #202020 100%);
+          @include small {
+            width:100%;
+            height:80px;
+          }
       }
     }
 
@@ -127,6 +197,7 @@
         margin:0 5px 20px;
 
       }
+
 
       &--iframe {
               	position:relative; top: 0; bottom: 0; width: 100%;
@@ -197,11 +268,26 @@
 
               &--text-left {
                 text-align:left;
+                @include small {
+                  text-align:center;
+                }
               }
 
               &--font-lato p {
                 font-weight: 400;
                 font-family: 'Lato', sans-serif;
+                @include small {
+                  text-align:left;
+                }
+              }
+
+              &--font-cardo p {
+                font-weight: 400;
+                font-family: 'Cardo', sans-serif;
+                line-height:1.55rem!important;
+                @include small {
+                  text-align:left;
+                }
               }
 
               &--border {
@@ -225,6 +311,12 @@
               & lottie-player {
                 margin:$space auto;
 
+              }
+
+              &--mobile {
+                @include small {
+                  flex: 0 0 100%;
+                }
               }
     }
 

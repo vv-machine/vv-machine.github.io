@@ -220,6 +220,12 @@
 //		margin-left:-40%;
 
 		transform:  translateY(-350%);
+
+
+							@include small {
+								transform:  translateY(-450%);
+
+							}
 	 }
 
 &__link-subtitle {

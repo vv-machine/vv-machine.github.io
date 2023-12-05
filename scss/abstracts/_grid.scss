@@ -1,5 +1,7 @@
 @use 'variables' as *;
 @use 'colours' as *;
+@use 'breakpoints' as *;
+
 //@use 'animation' as *;
 
 
@@ -15,15 +17,11 @@
     @extend %no-space;
   }
 
-
-
   &__content {
     position:relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-
-
   }
 
   & break {
@@ -41,6 +39,7 @@ $columns: 15;
  .lb__item--col-#{$i} {
    flex: 0 0 calc(100% / $columns * $i);
 
+
  }
  .lb__item--col-offset-#{$i} {
    margin-left: calc(100% / $columns * $i);
@@ -50,10 +49,26 @@ $columns: 15;
  .lb__item--marginleft-#{$i} {
    flex: calc(100% / $columns * $i - $space);
    margin-left:$space;
+
+   @include small {
+     flex: 0 0 calc(100% / $columns * $i);
+     margin-left:0;
+
+
+   }
  }
 
  .lb__item--marginright-#{$i} {
    flex: calc(100% / $columns * $i - $space);
    margin-right:$space;
+
+   @include small {
+     flex: 0 0 calc(100% / $columns * $i);
+     margin-right:0;
+
+
+   }
  }
+
+
 }
