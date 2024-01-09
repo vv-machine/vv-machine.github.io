@@ -8,7 +8,7 @@
 		@include typeScale(-3, 0);
 		p {
 			@extend %text-right;
-			font-weight: 600;
+			font-weight:600;
 			color:$dark;
 
 		}

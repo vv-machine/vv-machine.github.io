@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400&family=Source+Sans+3:wght@300;400;500;600&display=swap");
 /*
 $tablet-width: 768px;
 $desktop-width: 850px;
@@ -1167,7 +1168,7 @@ a.link--tag, a.link--tag:before, .lb__item strong, .lb__button:after, .main__ite
   color: white;
   font-size: 2.197rem;
   line-height: 2rem;
-  font-weight: 600;
+  font-weight: 500;
   height: auto;
   top: 50%;
   transform: translateY(-350%);
@@ -1453,7 +1454,8 @@ a.link--tag, a.link--tag:before, .lb__item strong, .lb__button:after, .main__ite
 }
 .lb__item strong {
   margin: 0 auto 10px;
-  font-weight: 400;
+  font-weight: 500;
+  font-family: "Mitr", sans-serif;
 }
 .lb__item--white {
   background-color: white;
@@ -2120,7 +2122,7 @@ h1 {
   font-family: "Mitr", sans-serif;
   font-size: 1.3rem;
   line-height: 1.5rem;
-  font-weight: 400;
+  font-weight: 300;
   /*
   	& strong {
   		@include typeScale(1, 2);
@@ -2143,6 +2145,7 @@ h3 {
   font-size: 1.3rem;
   line-height: 1.5rem;
   font-weight: 600;
+  font-family: "Mitr", sans-serif;
 }
 
 h4 {
@@ -2177,9 +2180,9 @@ a img, a img:hover {
 p {
   font-size: 1rem;
   line-height: 1rem;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans 3", sans-serif;
   margin: 0 auto 10px;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 .button {

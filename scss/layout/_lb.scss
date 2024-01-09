@@ -258,8 +258,8 @@
               strong {
                 @extend %block;
                 margin:0 auto $space;
-                font-weight: 400;
-
+                font-weight: 500;
+                font-family: 'Mitr', sans-serif;
               }
 
               &--white {
