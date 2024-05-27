@@ -997,10 +997,10 @@ a.link--tag, a.link--tag:before, .lb__item strong, .lb__button:after, .main__ite
     order: 3;
     flex: 1;
     z-index: 1;
-    margin: 145px 0 0;
-    height: calc(100vh - 160px);
-    height: -moz-calc(100vh - 160px);
-    height: -webkit-calc(100vh - 160px);
+    margin: 45px 0 0;
+    height: calc(100vh - 45px);
+    height: -moz-calc(100vh - 45px);
+    height: -webkit-calc(100vh - 45px);
     position: relative;
     display: block;
     background: transparent;
