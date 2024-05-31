@@ -197,7 +197,11 @@
         margin:0 5px 20px;
 
       }
+      &--left {
+        margin-left:0;
+        float:left;
 
+      }
 
       &--iframe {
               	position:relative; top: 0; bottom: 0; width: 100%;
@@ -206,7 +210,7 @@
                 padding-bottom:65%;
               		& canvas {
               			width:100%!important;
-              			height:500px!important;
+              			height:320px!important;
               		}
       }
     }
@@ -241,7 +245,7 @@
               }
 
               & p {
-                margin:0 auto 20px ;
+                margin:0 auto 6px ;
 
                 b {
                   font-weight: bold;
@@ -321,6 +325,7 @@
     }
 
     &__list {
+
       &--inline {
         width:100%;
         position:relative;
@@ -329,15 +334,24 @@
           display:inline-block;
           margin:$space 0;
           padding:0 $double-space;
+          font-family: "Source Sans Pro", sans-serif;
+
+
         }
       }
+      &--left {
+        li {      
+          text-align: left;
+        }
+        }
       margin-bottom: $space;
     }
 
-    &__text {
+    &--text {
               @extend %center;
               @extend %text-center;
     }
+
 
     a {
         @include typeScale(0, 1);

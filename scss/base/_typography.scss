@@ -77,3 +77,8 @@ p {
 	margin:0 auto $space;
 	font-weight:200;
 }
+
+a {
+	@include typeScale(0, 1);
+	font-family: 'Source Sans 3', sans-serif;
+}

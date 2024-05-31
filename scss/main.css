@@ -42,7 +42,7 @@ html, .lb, .lb div[class^=lb__item--col-], .lb__item, .main__list {
   padding: 0;
 }
 
-.lb__content, .lb__text, .main, .nav__link, .header__logo {
+.lb__content, .lb--text, .main, .nav__link, .header__logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -60,7 +60,7 @@ html, .lb, .lb div[class^=lb__item--col-], .lb__item, .main__list {
   overflow: hidden;
 }
 
-.lb__content, .lb__item, .lb__text, .main, .main__title, .main__list, .nav, .header {
+.lb__content, .lb__item, .lb--text, .main, .main__title, .main__list, .nav, .header {
   text-align: center;
 }
 
@@ -893,8 +893,8 @@ a.link--tag, a.link--tag:before, .lb__item strong, .lb__button:after, .main__ite
 }
 .nav__img {
   width: auto;
-  margin: -20px auto -35px;
-  width: 115px;
+  margin: -20px auto -45px;
+  width: 100px;
   transition: all 0.3s ease;
 }
 @media (min-width: 1200px) {
@@ -997,10 +997,10 @@ a.link--tag, a.link--tag:before, .lb__item strong, .lb__button:after, .main__ite
     order: 3;
     flex: 1;
     z-index: 1;
-    margin: 45px 0 0;
-    height: calc(100vh - 45px);
-    height: -moz-calc(100vh - 45px);
-    height: -webkit-calc(100vh - 45px);
+    margin: 65px 0 0;
+    height: calc(100vh - 65px);
+    height: -moz-calc(100vh - 65px);
+    height: -webkit-calc(100vh - 65px);
     position: relative;
     display: block;
     background: transparent;
@@ -1404,6 +1404,10 @@ a.link--tag, a.link--tag:before, .lb__item strong, .lb__button:after, .main__ite
   padding: 0;
   margin: 0 5px 20px;
 }
+.lb__img--left {
+  margin-left: 0;
+  float: left;
+}
 .lb__img--iframe {
   position: relative;
   top: 0;
@@ -1415,7 +1419,7 @@ a.link--tag, a.link--tag:before, .lb__item strong, .lb__button:after, .main__ite
 }
 .lb__img--iframe canvas {
   width: 100% !important;
-  height: 500px !important;
+  height: 320px !important;
 }
 .lb__item h1 {
   font-size: 2.197rem;
@@ -1440,7 +1444,7 @@ a.link--tag, a.link--tag:before, .lb__item strong, .lb__button:after, .main__ite
   margin: 20px auto;
 }
 .lb__item p {
-  margin: 0 auto 20px;
+  margin: 0 auto 6px;
 }
 .lb__item p b {
   font-weight: bold;
@@ -1519,6 +1523,10 @@ a.link--tag, a.link--tag:before, .lb__item strong, .lb__button:after, .main__ite
   display: inline-block;
   margin: 10px 0;
   padding: 0 10px;
+  font-family: "Source Sans Pro", sans-serif;
+}
+.lb__list--left li {
+  text-align: left;
 }
 .lb a {
   font-size: 1rem;
@@ -2183,6 +2191,12 @@ p {
   font-family: "Source Sans 3", sans-serif;
   margin: 0 auto 10px;
   font-weight: 200;
+}
+
+a {
+  font-size: 1rem;
+  line-height: 1rem;
+  font-family: "Source Sans 3", sans-serif;
 }
 
 .button {
