@@ -1171,7 +1171,7 @@ a.link--tag, a.link--tag:before, .lb__item strong, .lb__button:after, .main__ite
   font-weight: 500;
   height: auto;
   top: 50%;
-  transform: translateY(-350%);
+  transform: translateY(-500%);
 }
 @media (max-width: 960px) {
   .main__link-text {
@@ -1531,6 +1531,7 @@ a.link--tag, a.link--tag:before, .lb__item strong, .lb__button:after, .main__ite
 .lb a {
   font-size: 1rem;
   line-height: 1rem;
+  color:white;
 }
 .lb--small {
   width: 100%;

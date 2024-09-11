@@ -7,6 +7,9 @@
   overflow-y: scroll;
   @extend %no-scrollbar;
 
+  & a {
+    color:white;
+    }
   &__content {
     @extend %no-scrollbar;
       width: $mainwidth;
