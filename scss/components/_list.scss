@@ -1,0 +1,16 @@
+@use '../abstracts/' as *;
+
+.list {
+  &--inline {
+    width:100%;
+    position:relative;
+    li{
+      position:relative;
+      display:inline-block;
+      margin:$space;
+      padding:$double-space;
+
+
+    }
+  }
+}

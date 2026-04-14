@@ -1,0 +1,425 @@
+@use '../abstracts/' as *;
+
+.lb {
+  @include overlay($background-color: $dark, $color:white, $left: 0, $top:0, $z-index: 500);
+  @extend %no-space;
+  @include grid($width: 100vw);
+  overflow-y: scroll;
+  @extend %no-scrollbar;
+
+  & a {
+    color:white;
+    }
+  &__content {
+    @extend %no-scrollbar;
+      width: $mainwidth;
+      max-width: 90%;
+      @extend %center;
+      @extend %text-center;
+      padding-top:160px;
+      margin-bottom:100px;
+    }
+
+  &__iframecontainer {
+      padding:56.25% 0 0 0;
+      position: relative;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+    }
+
+    &__colours-jaadoo {
+      display:inline-block;
+      width:35px;
+      height:35px;
+      margin-right:$space;
+      margin-bottom: $space;
+
+      &:first-of-type {
+        background-color: #a9963e;
+      }
+
+      &:nth-of-type(2) {
+        background-color: #161511;
+
+      }
+
+      &:nth-of-type(3) {
+        background-color: #e8e8e7;
+
+      }
+
+
+      &:nth-of-type(4) {
+        background-color: #bd3d68;
+
+      }
+
+      &:nth-of-type(5) {
+      }
+
+/*      &:nth-of-type(6) {
+        background-color: #E0DAEB;
+
+      }
+      &:nth-of-type(7) {
+        background-color: #819629;
+
+      }
+
+*/
+      &:nth-of-type(7) {
+          width:20%;
+          height:36%;
+          background:linear-gradient( #e0d9ba, #d1bc94);
+
+      }
+      &:nth-of-type(8) {
+        width:20%;
+          height:36%;
+          background:linear-gradient( #F9E0D6, #F18C90, #BD3D68 );
+
+      }
+      &:nth-of-type(9) {
+        width:20%;
+          height:36%;
+          background:linear-gradient( #ffe861, #ff5e00 );
+
+      }
+      &:nth-of-type(10) {
+        width:20%;
+          height:36%;
+          background:linear-gradient( #e8e6e8, #dad4e2 );
+
+      }
+    }
+
+    &__colours-seam {
+      display:inline-block;
+      width:35px;
+      height:35px;
+      margin-right:$space;
+      margin-bottom: $space;
+
+      &:first-of-type {
+        background-color: #943e9f;
+      }
+
+      &:nth-of-type(2) {
+        background-color: #fe6b1b;
+      }
+
+      &:nth-of-type(3) {
+        background-color: #c45595;
+      }
+
+      &:nth-of-type(4) {
+        background-color: #d85d6d;
+      }
+
+      &:nth-of-type(5) {
+        background-color: #c683ce;
+      }
+
+      &:nth-of-type(6) {
+        background-color: #fea676;
+      }
+
+      &:nth-of-type(7) {
+        background-color: #d9addf;
+      }
+
+      &:nth-of-type(8) {
+        background-color: #ffc4a4;
+      }
+
+      &:nth-of-type(9) {
+              background-color: #202020;
+      }
+
+      &:nth-of-type(10) {
+              background-color: #4d4d4d;
+      }
+
+      &:nth-of-type(11) {
+              background-color: #797979;
+      }
+
+      &:nth-of-type(12) {
+              background-color: #ebecec;
+      }
+
+
+      &:last-of-type {
+          width:94%;
+          height:36%;
+          background:radial-gradient(214.07% 217.99% at 32.29% -48%, #404040 0%, #202020 67.43%, #202020 100%);
+          @include small {
+            width:100%;
+            height:80px;
+          }
+      }
+    }
+
+    &__img {
+      margin:10px auto 10px;
+
+      @extend %full-width;
+      margin:10px auto 10px;
+      align-self: center;
+      &--half {
+        width:40%;
+        margin:0 4% 20px;
+
+        @include small {
+          width:70%;
+          margin:30px auto;
+
+        }
+      }
+      &--twothirds {
+        width:75%;
+        margin:0 4% 20px;
+
+        @include small {
+          width:85%;
+          margin:30px auto;
+
+        }
+      }
+      &--auto {
+        width:auto;
+        height:auto;
+        padding:0;
+        margin:0 5px 20px;
+
+      }
+      &--left {
+        margin-left:0;
+        float:left;
+
+      }
+
+      &--iframe {
+              	position:relative; top: 0; bottom: 0; width: 100%;
+              	display:block;
+              	height:0;
+                padding-bottom:65%;
+              		& canvas {
+              			width:100%!important;
+              			height:320px!important;
+              		}
+      }
+    }
+
+    &__item {
+              @extend %no-space;
+              @extend %text-center;
+
+              & h1 {
+                @include typeScale(3,4);
+                margin:0 auto;
+
+                strong {
+                  text-transform: none;
+                  @include typeScale(1,2);
+                }
+              }
+
+              & strong {
+                @include typeScale(1,2);
+
+              }
+
+              & h2 {
+                margin:20px auto 0;
+                @include typeScale(2,3);
+
+              }
+
+              & h3 {
+                margin:20px auto;
+              }
+
+              & p {
+                margin:0 auto 6px ;
+
+                b {
+                  font-weight: bold;
+                }
+              }
+
+              & a {
+                color:$light;
+                font-weight:normal;
+                &:hover {
+                  text-decoration:underline;
+                }
+              }
+              strong {
+                @extend %block;
+                margin:0 auto $space;
+                font-weight: 500;
+                font-family: 'Mitr', sans-serif;
+              }
+
+              &--white {
+                background-color: white;
+              }
+
+              &--text-left {
+                text-align:left;
+                @include small {
+                  text-align:center;
+                }
+              }
+
+              &--font-lato p {
+                font-weight: 400;
+                font-family: 'Lato', sans-serif;
+                @include small {
+                  text-align:left;
+                }
+              }
+
+              &--font-cardo p {
+                font-weight: 400;
+                font-family: 'Cardo', sans-serif;
+                line-height:1.55rem!important;
+                @include small {
+                  text-align:left;
+                }
+              }
+
+              &--border {
+                border:1px solid white;
+                padding: $space;
+                margin:$space auto;
+
+              }
+
+              &--topspace {
+                margin-top:50px;
+
+              }
+
+              &--spacehorisontal {
+                margin-left:5px;
+                margin-right:5px;
+
+              }
+
+              & lottie-player {
+                margin:$space auto;
+
+              }
+
+              &--mobile {
+                @include small {
+                  flex: 0 0 100%;
+                }
+              }
+    }
+
+    &__list {
+
+      &--inline {
+        width:100%;
+        position:relative;
+        li{
+          position:relative;
+          display:inline-block;
+          margin:$space 0;
+          padding:0 $double-space;
+          font-family: "Source Sans Pro", sans-serif;
+
+
+        }
+      }
+      &--left {
+        li {      
+          text-align: left;
+        }
+        }
+      margin-bottom: $space;
+    }
+
+    &--text {
+              @extend %center;
+              @extend %text-center;
+    }
+
+
+    a {
+        @include typeScale(0, 1);
+    }
+
+    &--small {
+      width:100%;
+      height:55px;
+    //  @include offset($top:auto,$bottom: $space, $left:7vw, $z-index:550);
+      @extend %padding;
+
+    }
+
+
+
+    &__button {
+        @extend %fixed;
+        @include offset($top: $space, $right:$space, $z-index:4);
+        @extend %darkcolors;
+        padding:$space;
+        text-decoration: none;
+        @include typeScale(3, 1.5);
+        transition: 0.3s;
+        margin-top:160px;
+      	width:115px;
+        background:yellow;
+        right:20%;
+
+
+        @include small {
+          right:-20px;
+          margin-top:100px;
+        }
+
+
+        @include medium {
+          right:1vw;
+        }
+
+
+        @include large {
+          right:10vw;
+        }
+
+        @include x-large {
+          right:20vw;
+        }
+
+        &:after {
+          @extend %pseudo;
+          content:"\2715";
+          @extend %block;
+          @include position($position:absolute, $top:10px, $left:0, $z-index: -10);
+          background: -webkit-linear-gradient( #008000 ,#ffa500, #ff0000,  #4b0082);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+
+        }
+        &:visited {
+          color:white;
+        }
+        &:hover, &:active {
+          color:transparent;
+        }
+      }
+
+
+}

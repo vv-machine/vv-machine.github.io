@@ -1,0 +1,84 @@
+@use '../abstracts/' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+
+h1 {
+	font-family: 'Mitr', sans-serif;
+	@include typeScale(1, 1.5);
+	font-weight:300;
+	@extend %text-uppercase;
+/*
+	& strong {
+		@include typeScale(1, 2);
+		@extend %block;
+		text-transform: none;
+
+	}
+
+	*/
+
+}
+
+
+
+h2 {
+	@include typeScale(1, 1.5);
+	font-family: 'Mitr', sans-serif;
+	font-weight:400;
+	@extend %text-uppercase;
+
+}
+
+h3 {
+	@include typeScale(1, 1.5);
+	font-weight:600;
+	font-family: 'Mitr', sans-serif;
+
+}
+
+h4 {
+	@include typeScale(0, 1);
+	font-weight:600;
+	margin:$space auto;
+}
+
+
+a {
+	cursor: pointer;
+
+	color:$dark;
+	text-decoration: none;
+	font-weight:600;
+	&:active, &:focus, &:hover {
+	 outline: none;
+	 ie-dummy: expression(this.hideFocus=true);
+	 border:0;
+	}
+
+
+	& img, & img:hover {
+		outline: none;
+ 	 ie-dummy: expression(this.hideFocus=true);
+ 	 border:0;
+	 -moz-outline-style: none;
+	}
+}
+
+.nav--active .nav__link a {
+	color:$light;
+}
+strong {
+
+}
+
+p {
+	@include typeScale(0, 1);
+	font-family: 'Source Sans 3', sans-serif;
+	margin:0 auto $space;
+	font-weight:200;
+}
+
+a {
+	@include typeScale(0, 1);
+	font-family: 'Source Sans 3', sans-serif;
+}

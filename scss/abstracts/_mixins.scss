@@ -1,0 +1,56 @@
+//@use 'animation' as *;
+
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null, $z-index:null, $height:null ) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left:$left;
+  z-index: $z-index;
+  height:$height;
+}
+
+@mixin offset( $top: null, $right: null, $bottom: null, $left: null, $z-index:null, $height:null, $width:null ) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left:$left;
+  z-index: $z-index;
+  height:$height;
+  width:$width;
+}
+/*
+@mixin display($display, $grid-template-columns:null, $grid-gap:null, $grid-column-gap:null, $grid-row-gap:null, $grid-auto-flow:null) {
+  display: $display;
+  grid-template-columns: $grid-template-columns;
+	grid-gap: $grid-gap;
+  grid-column-gap: $grid-column-gap;
+  grid-row-gap: $grid-row-gap;
+  grid-auto-flow: $grid-auto-flow;
+}
+*/
+@mixin transform($transforms) {
+	   -moz-transform: $transforms;
+	     -o-transform: $transforms;
+	    -ms-transform: $transforms;
+	-webkit-transform: $transforms;
+          transform: $transforms;
+}
+
+@mixin translate ($x, $y) {
+   @include transform(translate($x, $y));
+}
+
+@mixin scale($ratio) {
+  -webkit-transform: scale($ratio);
+     -moz-transform: scale($ratio);
+      -ms-transform: scale($ratio);
+       -o-transform: scale($ratio);
+          transform: scale($ratio);
+}
+
+@mixin border-radius($radius) {
+	border-radius: $radius;
+	-webkit-border-radius: $radius;
+	-moz-border-radius: $radius;
+}
