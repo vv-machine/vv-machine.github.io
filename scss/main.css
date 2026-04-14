@@ -1911,6 +1911,7 @@ a.link--tag:hover {
    ========================================= */
 
 @media (max-width: 959px) {
+
   body {
     height: auto;
     overflow-x: hidden;
@@ -2016,6 +2017,10 @@ a.link--tag:hover {
     right: 20px;
     z-index: 1000;
   }
+
+  .lb.lb--active ~ .button--hamburger {
+  display:none;
+}
   .nav.nav--active {
     display: block;
     animation: fadein 0.5s linear 0s 1 forwards;
@@ -2123,14 +2128,18 @@ a.link--tag:hover {
   .lb__item--font-cardo p {
     text-align: center;
   }
-
+ .lb__item {
+    flex: 0 0 100%;
+  }
   .lb__item--mobile {
     flex: 0 0 100%;
   }
 
   .lb__button {
-    right: -20px;
-    margin-top: 100px;
+    position:fixed;
+    display:block;
+top: 30px;
+    right: 20px;
   }
 
   .lb__colours-seam:last-of-type {
