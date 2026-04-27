@@ -1756,15 +1756,15 @@ a.link--tag:hover {
   }
 
   .main-wrapper {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 70px;
-    height: 100vh;
-    padding: 0 40px;
-    overflow: hidden;
-    box-sizing: border-box;
-    max-width:1500px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 70px;
+  height: 100vh;
+  padding: 0 40px;
+  overflow: hidden;
+  box-sizing: border-box;
+  margin: 0 auto;  /* ← add this */
   }
 
 .header {
@@ -1782,10 +1782,10 @@ a.link--tag:hover {
 }
 
   .main {
-    flex: 0 0 700px;
-    width: 700px;
-    min-width: 700px;
-    max-width: 700px;
+flex: 0 0 clamp(580px, 50vw, 700px);
+width: clamp(580px, 50vw, 700px);
+min-width: 0;
+max-width: 700px;
     height: 100vh;
     margin: 0;
     padding: 80px 0;
@@ -1856,23 +1856,23 @@ a.link--tag:hover {
 
 @media (min-width: 960px) and (max-width: 1300px) {
   .main-wrapper {
-    gap: 30px;
+    gap: 50px;
     padding-left: 20px;
     padding-right: 20px;
   }
 
-  .header {
-    flex: 0 0 220px;
-    width: 200px;
-    min-width: 200px;
-    max-width: 200px;
-  }
+.header {
+  flex: 0 0 clamp(190px, 15vw, 270px);
+  width: clamp(190px, 15vw, 270px);
+  min-width: 0;
+}
 
-  .header__logo {
-    width: 220px;
-    margin-top: 100px;
-  }
+.header__logo {
+  width: clamp(190px, 15vw, 270px);
+  margin: 100px 0 0;
+}
 
+  /* delete the .main block entirely from here */
   .main {
     flex: 0 1 580px;
     width: 580px;

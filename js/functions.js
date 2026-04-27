@@ -9,18 +9,10 @@ $(document).ready(function () {
 
   var htmlEl = document.documentElement;
   var $fakeCursor = $('#fakeCursor');
-  var isChrome = navigator.userAgent.includes('Chrome') && !navigator.userAgent.includes('Edg');
-
-  if (isChrome) {
-    htmlEl.classList.add('is-chrome');
-  }
 
   var lazyLoadState = {
     map: false,
-    seam: false,
-    jaadoodesign: false,
-    codepen: false,
-    vimeo: false
+    seam: false
   };
 
   function clearHash() {
@@ -118,18 +110,6 @@ $(document).ready(function () {
     if (hash.indexOf('seam') > -1) {
       loadSeam();
     }
-
-    if (hash.indexOf('storybook') > -1) {
-      loadCodepen();
-    }
-
-    if (hash.indexOf('gourmetgoons') > -1) {
-      loadVimeo();
-    }
-
-    if (hash.indexOf('jaadoodesign') > -1) {
-      loadJaadoodesign();
-    }
   }
 
   function syncUiToHash() {
@@ -173,100 +153,64 @@ $(document).ready(function () {
     }, 300);
   }
 
-function loadMap() {
-  if (lazyLoadState.map) {
-    return;
-  }
-
-  var mapEl = document.getElementById('map');
-
-  if (!mapEl) {
-    return;
-  }
-
-  if (typeof mapboxgl === 'undefined') {
-    console.error('Mapbox GL JS is not loaded.');
-    return;
-  }
-
-  var map = new mapboxgl.Map({
-    container: 'map',
-    style: 'mapbox://styles/vv-machine/ckuz38e300g1t14mticq9ttp4?optimize=true',
-    center: [134.149831, -28.258874],
-    zoom: 2
-  });
-
-  map.on('load', function () {
-    map.resize();
-  });
-
-  lazyLoadState.map = true;
-}
-
-function loadSeam() {
-  var $container = $('#seamLottieContainer');
-
-  if (!$container.length) {
-    return;
-  }
-
-  if (!$('link[data-font="lato"]').length) {
-    $('head').append('<link data-font="lato" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet" />');
-  }
-
-  if (!$container.hasClass('seam-lottie-ready')) {
-    var jsonPath = window.location.origin + '/img/seam_main.json';
-
-    $container
-      .addClass('seam-lottie-ready')
-      .html(
-        '<lottie-player ' +
-          'src="' + jsonPath + '" ' +
-          'speed="1" ' +
-          'style="width: 100%; height: auto;" ' +
-          'loop ' +
-          'autoplay>' +
-        '</lottie-player>'
-      );
-  }
-
-  lazyLoadState.seam = true;
-}
-
-  function loadJaadoodesign() {
-    if (lazyLoadState.jaadoodesign) {
+  function loadMap() {
+    if (lazyLoadState.map) {
       return;
     }
 
-    if (!$('link[data-font="cardo"]').length) {
-      $('head').append('<link data-font="cardo" href="https://fonts.googleapis.com/css2?family=Cardo&display=swap" rel="stylesheet" />');
-    }
+    var mapEl = document.getElementById('map');
 
-    lazyLoadState.jaadoodesign = true;
-  }
-
-  function loadCodepen() {
-    if (lazyLoadState.codepen) {
+    if (!mapEl) {
       return;
     }
 
-    if (!$('#codepenContainer iframe').length) {
-      $('#codepenContainer').html('<iframe class="lb__img" height="550" style="width: 105%; margin-left:-2.5%" scrolling="no" src="https://codepen.io/vv-machine/embed/LYzGdmP?default-tab=result" frameborder="no" loading="lazy" allowfullscreen></iframe>');
-    }
-
-    lazyLoadState.codepen = true;
-  }
-
-  function loadVimeo() {
-    if (lazyLoadState.vimeo) {
+    if (typeof mapboxgl === 'undefined') {
+      console.error('Mapbox GL JS is not loaded.');
       return;
     }
 
-    if (!$('#gourmetgoonsContainer iframe').length) {
-      $('#gourmetgoonsContainer').html('<iframe src="https://player.vimeo.com/video/104087126?h=117115109f" width="750" height="400" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>');
+    var map = new mapboxgl.Map({
+      container: 'map',
+      style: 'mapbox://styles/vv-machine/ckuz38e300g1t14mticq9ttp4?optimize=true',
+      center: [134.149831, -28.258874],
+      zoom: 2
+    });
+
+    map.on('load', function () {
+      map.resize();
+    });
+
+    lazyLoadState.map = true;
+  }
+
+  function loadSeam() {
+    var $container = $('#seamLottieContainer');
+
+    if (!$container.length) {
+      return;
     }
 
-    lazyLoadState.vimeo = true;
+    if (!$('link[data-font="lato"]').length) {
+      $('head').append('<link data-font="lato" href="https://fonts.googleapis.com/css2?family=Lato:wght@400;900&display=swap" rel="stylesheet" />');
+    }
+
+    if (!$container.hasClass('seam-lottie-ready')) {
+      var jsonPath = window.location.origin + '/img/seam_main.json';
+
+      $container
+        .addClass('seam-lottie-ready')
+        .html(
+          '<lottie-player ' +
+            'src="' + jsonPath + '" ' +
+            'speed="1" ' +
+            'style="width: 100%; height: auto;" ' +
+            'loop ' +
+            'autoplay>' +
+          '</lottie-player>'
+        );
+    }
+
+    lazyLoadState.seam = true;
   }
 
   if ($window.width() >= desktopBreakpoint) {
@@ -299,9 +243,6 @@ function loadSeam() {
 
   $('#storymapsLink').on('click', loadMap);
   $('#seamLink').on('click', loadSeam);
-  $('#storybookLink').on('click', loadCodepen);
-  $('#gourmetgoonsLink').on('click', loadVimeo);
-  $('#jaadoodesignLink').on('click', loadJaadoodesign);
 
   $(window).on('hashchange', function () {
     syncUiToHash();
@@ -315,9 +256,9 @@ function loadSeam() {
   resetResponsiveUi();
   syncUiToHash();
 
-  if (!$('script[data-lottie-player]').length) {
+  if (!customElements.get('lottie-player')) {
     var sourceLottie = document.createElement('script');
-    sourceLottie.src = 'https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js';
+    sourceLottie.src = 'https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js';
     sourceLottie.setAttribute('data-lottie-player', 'true');
     document.head.appendChild(sourceLottie);
   }
@@ -434,12 +375,6 @@ function loadSeam() {
       return;
     }
 
-    if (isChrome) {
-      htmlEl.classList.add('use-css-cursor');
-      $fakeCursor.removeClass('is-gradient');
-      return;
-    }
-
     htmlEl.classList.add('use-fake-cursor');
   }
 
@@ -452,6 +387,14 @@ function loadSeam() {
     }
 
     $fakeCursor.css('transform', 'translate(' + e.clientX + 'px,' + e.clientY + 'px)');
+  });
+
+  $(document).on('mouseleave', function () {
+    $fakeCursor.css('opacity', '0');
+  });
+
+  $(document).on('mouseenter', function () {
+    $fakeCursor.css('opacity', '1');
   });
 
   $(document).on(

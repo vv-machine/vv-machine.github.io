@@ -20,7 +20,6 @@
 <script src="js/lazysizes.min.js" async=""></script>
 <script src="js/spy.js"></script>
 <script src="js/functions.js"></script>
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 	<script>
 	  window.dataLayer = window.dataLayer || [];
 	  function gtag(){dataLayer.push(arguments);}
@@ -933,10 +932,6 @@ Materials: fish leather, clay paint, natural pigments, willow, red clay, fish tr
 		<p><span id="year"></span> © VV-machine 2627219-4</p><script>document.getElementById('year').textContent=new Date().getFullYear()</script>
 	</footer>
 
-	<script>
-	mapboxgl.accessToken = 'pk.eyJ1IjoidnYtbWFjaGluZSIsImEiOiJGSkFKOHlJIn0.ePJNIF799i_Rf6ez0Et-Jw';
-	</script>
-
 <script>
 (function () {
   var mapboxAssetsLoaded = false;
@@ -980,19 +975,26 @@ Materials: fish leather, clay paint, natural pigments, willow, red clay, fish tr
     document.head.appendChild(mapScript);
   }
 
-  function initSeamLottie() {
-    if (seamLoaded) {
-      return;
+function loadLottiePlayer(callback) {
+    if (customElements.get('lottie-player')) {
+      callback(); return;
     }
-
-    var seamContainer = document.getElementById('hattifattinerContainer');
-    if (!seamContainer) {
-      return;
-    }
-
-    seamContainer.innerHTML = '<lottie-player src="img/seam_hattifattiner.json" speed="1" style="width: 100%; height: auto" loop autoplay></lottie-player>';
-    seamLoaded = true;
+    var s = document.createElement('script');
+    s.src = 'https://unpkg.com/@lottiefiles/lottie-player@2.0.8/dist/lottie-player.js';
+    s.onload = callback;
+    document.head.appendChild(s);
   }
+
+  function initSeamLottie() {
+      if (seamLoaded) return;
+      var seamContainer = document.getElementById('hattifattinerContainer');
+      if (!seamContainer) return;
+
+      loadLottiePlayer(function() {
+        seamContainer.innerHTML = '<lottie-player src="img/seam_hattifattiner.json" speed="1" style="width: 100%; height: auto" loop autoplay></lottie-player>';
+        seamLoaded = true;
+      });
+    }
 
   function initMap() {
     var mapEl = document.getElementById('map');
