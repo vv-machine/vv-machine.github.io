@@ -1223,6 +1223,32 @@ a.link--tag:hover {
   margin-bottom: 12px;
 }
 
+@media (max-width: 959px) {
+  .egg-split {
+    display: block;
+  }
+
+  .egg-split__media,
+  .egg-split__text {
+    flex: none;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .egg-split__text {
+    margin-top: 24px;
+  }
+
+  .egg-masonry {
+    column-count: 2;
+    column-gap: 10px;
+  }
+
+  .egg-card .lb__img {
+    width: 100%;
+  }
+}
+
 .main h1,
 .main h2,
 .main h3,
@@ -1499,18 +1525,13 @@ a.link--tag:hover {
   font-weight: bold;
 }
 
-.lb__item h1 strong {
-  font-size: 1.3rem;
-  line-height: 2rem;
-  text-transform: none;
-}
-
-.lb__item strong {
+.lb__item h1 .lb__title-subtitle {
   display: block;
   margin: 0 auto 10px;
   font-size: 1.3rem;
   font-weight: 500;
   line-height: 2rem;
+  text-transform: none;
 }
 
 .lb__item h2 {
@@ -2173,7 +2194,7 @@ max-width: 700px;
   .lb__item--text-left,
   .lb__item--font-lato p,
   .lb__item--font-cardo p {
-    text-align: center;
+    text-align: left;
   }
  .lb__item {
     flex: 0 0 100%;
@@ -2568,6 +2589,14 @@ background: linear-gradient(120deg, #008000, #ffa500, #ff0000, #0000ff);
   width: auto;
   height: auto;
   object-fit: contain;
+  cursor: zoom-in;
+  transition: transform 0.25s ease;
+  transform-origin: center center;
+}
+
+.expand-overlay__img.is-zoomed {
+  cursor: zoom-out;
+  transform: scale(2.4);
 }
 
 .expand-image-close {
@@ -2768,5 +2797,58 @@ background: linear-gradient(120deg, #008000, #ffa500, #ff0000, #0000ff);
 @media (max-width: 959px) {
   .lb__form-embed {
     height: 1000px;
+  }
+}
+
+.video-embed {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-embed iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.lb__item--text-left p {
+  line-height: 1.55;
+  margin: 0 0 20px;
+}
+
+.lb__item--text-left p:last-child {
+  margin-bottom: 0;
+}
+
+.lb__info {
+  padding-left: 14px;
+  border-left: 2px solid rgba(255, 255, 255, 0.3);
+  margin: 0 0 24px;
+}
+
+.lb__info p {
+  margin: 0 0 8px;
+  line-height: 1.5;
+}
+
+.lb__info p:last-child {
+  margin-bottom: 0;
+}
+
+.lb__info b,
+.lb__info strong {
+  color: var(--site-white);
+}
+
+@media (max-width: 959px) {
+  .lb__item--text-left p {
+    line-height: 1.5;
+    margin: 0 0 16px;
   }
 }
